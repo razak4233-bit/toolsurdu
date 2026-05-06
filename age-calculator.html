@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YuMe3hHGYiFxAMv0M11YgiNrV1Zrnv3Xl1gnTtaLnd0" />
+<title>Age Calculator Online Free - عمر کیلکولیٹر | ToolsUrdu</title>
+<meta name="description" content="Free online age calculator Pakistan. Apni exact age seconds tak calculate karo. Date of birth se exact years, months, days, hours aur seconds mein umar nikalo - bilkul free!">
+<meta name="keywords" content="age calculator, age calculator Pakistan, umar calculator, date of birth calculator, free age calculator online, عمر کیلکولیٹر">
+<meta property="og:title" content="Free Age Calculator Online | ToolsUrdu">
+<meta property="og:description" content="Apni exact age years, months, days aur seconds mein calculate karo - bilkul free!">
+<meta property="og:url" content="https://razak4233-bit.github.io/toolsurdu/age-calculator.html">
+<link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/age-calculator.html">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
+
+  header { background: #1A1A2E; color: white; padding: 16px 20px; }
+  .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.4rem; font-weight: bold; text-decoration: none; color: white; }
+  .logo span { color: #a78bfa; }
+  nav a { color: #ccc; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+  nav a:hover { color: white; }
+
+  .breadcrumb { background: #f0f0f0; padding: 8px 20px; font-size: 0.82rem; color: #888; }
+  .breadcrumb a { color: #0F3460; text-decoration: none; }
+
+  .container { max-width: 860px; margin: 30px auto; padding: 0 20px; }
+  h1 { font-size: 1.8rem; color: #1A1A2E; margin-bottom: 6px; }
+  .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
+
+  .tool-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+
+  .input-group { margin-bottom: 20px; }
+  label { display: block; font-weight: bold; color: #1A1A2E; margin-bottom: 8px; font-size: 0.95rem; }
+  input[type="date"] {
+    width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 10px;
+    font-size: 1rem; font-family: Arial, sans-serif; outline: none; transition: border 0.2s;
+    color: #333; background: #fafafa;
+  }
+  input[type="date"]:focus { border-color: #0F3460; background: white; }
+
+  .btn-calc {
+    width: 100%; padding: 14px; background: #1A1A2E; color: white;
+    border: none; border-radius: 10px; font-size: 1.05rem; font-weight: bold;
+    cursor: pointer; transition: background 0.2s; margin-top: 6px;
+  }
+  .btn-calc:hover { background: #0F3460; }
+
+  /* RESULT */
+  .result-box { display: none; margin-top: 24px; }
+  .result-main {
+    background: linear-gradient(135deg, #1A1A2E, #0F3460);
+    border-radius: 14px; padding: 24px; text-align: center; color: white; margin-bottom: 16px;
+  }
+  .result-main .age-big { font-size: 3.5rem; font-weight: bold; line-height: 1; }
+  .result-main .age-label { font-size: 1rem; color: #a78bfa; margin-top: 6px; }
+  .result-main .next-bday { font-size: 0.88rem; color: #ccc; margin-top: 12px; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  .stat-card { background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 12px; padding: 16px; text-align: center; }
+  .stat-number { font-size: 1.6rem; font-weight: bold; color: #0F3460; line-height: 1; }
+  .stat-label { font-size: 0.78rem; color: #888; margin-top: 6px; }
+
+  /* ZODIAC */
+  .zodiac-box { background: #fdf4ff; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 16px; margin-top: 16px; text-align: center; }
+  .zodiac-sign { font-size: 2rem; margin-bottom: 4px; }
+  .zodiac-name { font-weight: bold; color: #7c3aed; }
+  .zodiac-sub { font-size: 0.85rem; color: #888; margin-top: 4px; }
+
+  .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
+  .feature-list { list-style: none; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+  .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+
+  footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
+  footer a { color: #0F3460; text-decoration: none; margin: 0 10px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.4rem; }
+    .age-big { font-size: 2.5rem !important; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">🛠️ Tools<span>Urdu</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › Age Calculator
+</div>
+
+<div class="container">
+  <h1>🎂 Age Calculator — عمر کیلکولیٹر</h1>
+  <p class="subtitle">Apni date of birth daalo aur exact age seconds tak janو — bilkul free!</p>
+
+  <div class="tool-box">
+    <div class="input-group">
+      <label>📅 Apni Date of Birth daalo — اپنی تاریخ پیدائش:</label>
+      <input type="date" id="dob" max="">
+    </div>
+    <div class="input-group">
+      <label>📆 Kis date tak calculate karein? (default: aaj)</label>
+      <input type="date" id="toDate">
+    </div>
+    <button class="btn-calc" onclick="calculateAge()">🎯 Apni Umar Calculate Karo</button>
+
+    <!-- RESULT -->
+    <div class="result-box" id="resultBox">
+      <div class="result-main">
+        <div class="age-big" id="ageYears">0</div>
+        <div class="age-label">Saal Ki Umar — Years Old</div>
+        <div class="next-bday" id="nextBday"></div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="totalMonths">0</div>
+          <div class="stat-label">Total Months / مہینے</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalDays">0</div>
+          <div class="stat-label">Total Days / دن</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalHours">0</div>
+          <div class="stat-label">Total Hours / گھنٹے</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalMinutes">0</div>
+          <div class="stat-label">Total Minutes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalSeconds">0</div>
+          <div class="stat-label">Total Seconds / سیکنڈ</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="dayOfWeek">-</div>
+          <div class="stat-label">Day of Birth / دن</div>
+        </div>
+      </div>
+
+      <div class="zodiac-box" id="zodiacBox">
+        <div class="zodiac-sign" id="zodiacEmoji">⭐</div>
+        <div class="zodiac-name" id="zodiacName">-</div>
+        <div class="zodiac-sub" id="zodiacDates">-</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <div class="seo-box">
+    <h2>Age Calculator Kya Hai? — عمر کیلکولیٹر کیا ہے؟</h2>
+    <p>
+      ToolsUrdu ka <strong>free online age calculator</strong> aapki date of birth se exact umar calculate karta hai — sirf saal mein nahi, balki months, days, hours aur seconds mein bhi! Pakistan mein yeh tool students, job applicants, aur parents ke liye bohot kaam ka hai.
+    </p>
+    <p>
+      Kai baar hamen exact age ki zaroorat hoti hai — form fill karte waqt, job apply karte waqt, ya sirf curiosity se. Hamare tool mein bas apni DOB daalo aur ek click mein poori detail aa jayegi.
+    </p>
+
+    <h3>🌟 Khasiyatein — Features:</h3>
+    <ul class="feature-list">
+      <li>Exact age years, months aur days mein</li>
+      <li>Total seconds tak age calculate hoti hai</li>
+      <li>Agle birthday mein kitne din baaki hain</li>
+      <li>Kis din paida hue the — day of week</li>
+      <li>Zodiac sign automatically pata chalta hai</li>
+      <li>Kisi bhi date tak age calculate kar sakte hain</li>
+      <li>Bilkul free — koi registration nahi</li>
+    </ul>
+
+    <h3>❓ Aksar Pooche Jane Wale Sawal:</h3>
+    <div class="faq-item">
+      <div class="faq-q">Q: Age calculator Pakistan mein kaise use karein?</div>
+      <div class="faq-a">A: Upar diye gaye box mein apni date of birth select karo aur "Calculate" dabao. Foran result aa jayega.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya yeh tool bilkul free hai?</div>
+      <div class="faq-a">A: Haan, 100% free hai. Koi account nahi, koi payment nahi.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya main kisi aur ki age calculate kar sakta hoon?</div>
+      <div class="faq-a">A: Bilkul! Kisi bhi shakhs ki date of birth daalo — unki age calculate ho jayegi.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Job form ke liye exact age kaise nikalen?</div>
+      <div class="faq-a">A: "Kis date tak calculate karein" mein woh deadline date daalo — us din tak tumhari exact age aa jayegi.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ToolsUrdu — Sab tools bilkul free hain</p>
+  <br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  // Set default dates
+  const today = new Date();
+  document.getElementById('toDate').value = today.toISOString().split('T')[0];
+  document.getElementById('dob').max = today.toISOString().split('T')[0];
+
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const zodiacs = [
+    { sign: 'Capricorn', emoji: '♑', dates: 'Dec 22 - Jan 19' },
+    { sign: 'Aquarius', emoji: '♒', dates: 'Jan 20 - Feb 18' },
+    { sign: 'Pisces', emoji: '♓', dates: 'Feb 19 - Mar 20' },
+    { sign: 'Aries', emoji: '♈', dates: 'Mar 21 - Apr 19' },
+    { sign: 'Taurus', emoji: '♉', dates: 'Apr 20 - May 20' },
+    { sign: 'Gemini', emoji: '♊', dates: 'May 21 - Jun 20' },
+    { sign: 'Cancer', emoji: '♋', dates: 'Jun 21 - Jul 22' },
+    { sign: 'Leo', emoji: '♌', dates: 'Jul 23 - Aug 22' },
+    { sign: 'Virgo', emoji: '♍', dates: 'Aug 23 - Sep 22' },
+    { sign: 'Libra', emoji: '♎', dates: 'Sep 23 - Oct 22' },
+    { sign: 'Scorpio', emoji: '♏', dates: 'Oct 23 - Nov 21' },
+    { sign: 'Sagittarius', emoji: '♐', dates: 'Nov 22 - Dec 21' },
+  ];
+
+  function getZodiac(month, day) {
+    const m = month + 1;
+    if ((m == 1 && day >= 20) || (m == 2 && day <= 18)) return zodiacs[1];
+    if ((m == 2 && day >= 19) || (m == 3 && day <= 20)) return zodiacs[2];
+    if ((m == 3 && day >= 21) || (m == 4 && day <= 19)) return zodiacs[3];
+    if ((m == 4 && day >= 20) || (m == 5 && day <= 20)) return zodiacs[4];
+    if ((m == 5 && day >= 21) || (m == 6 && day <= 20)) return zodiacs[5];
+    if ((m == 6 && day >= 21) || (m == 7 && day <= 22)) return zodiacs[6];
+    if ((m == 7 && day >= 23) || (m == 8 && day <= 22)) return zodiacs[7];
+    if ((m == 8 && day >= 23) || (m == 9 && day <= 22)) return zodiacs[8];
+    if ((m == 9 && day >= 23) || (m == 10 && day <= 22)) return zodiacs[9];
+    if ((m == 10 && day >= 23) || (m == 11 && day <= 21)) return zodiacs[10];
+    if ((m == 11 && day >= 22) || (m == 12 && day <= 21)) return zodiacs[11];
+    return zodiacs[0];
+  }
+
+  function formatNum(n) {
+    return n.toLocaleString();
+  }
+
+  function calculateAge() {
+    const dobVal = document.getElementById('dob').value;
+    const toVal = document.getElementById('toDate').value;
+    if (!dobVal) { alert('Pehle apni date of birth daalo!'); return; }
+
+    const dob = new Date(dobVal);
+    const to = toVal ? new Date(toVal) : new Date();
+
+    if (dob > to) { alert('Date of birth future mein nahi ho sakti!'); return; }
+
+    // Years, months, days
+    let years = to.getFullYear() - dob.getFullYear();
+    let months = to.getMonth() - dob.getMonth();
+    let daysR = to.getDate() - dob.getDate();
+    if (daysR < 0) { months--; }
+    if (months < 0) { years--; months += 12; }
+
+    // Total calculations
+    const diffMs = to - dob;
+    const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+    const totalMinutes = Math.floor(diffMs / (1000 * 60));
+    const totalSeconds = Math.floor(diffMs / 1000);
+    const totalMonths = years * 12 + months;
+
+    // Next birthday
+    let nextBday = new Date(to.getFullYear(), dob.getMonth(), dob.getDate());
+    if (nextBday <= to) nextBday.setFullYear(nextBday.getFullYear() + 1);
+    const daysToNext = Math.ceil((nextBday - to) / (1000 * 60 * 60 * 24));
+
+    // Day of week
+    const dayOfWeek = days[dob.getDay()];
+
+    // Zodiac
+    const zodiac = getZodiac(dob.getMonth(), dob.getDate());
+
+    // Display
+    document.getElementById('ageYears').textContent = years;
+    document.getElementById('totalMonths').textContent = formatNum(totalMonths);
+    document.getElementById('totalDays').textContent = formatNum(totalDays);
+    document.getElementById('totalHours').textContent = formatNum(totalHours);
+    document.getElementById('totalMinutes').textContent = formatNum(totalMinutes);
+    document.getElementById('totalSeconds').textContent = formatNum(totalSeconds);
+    document.getElementById('dayOfWeek').textContent = dayOfWeek;
+    document.getElementById('nextBday').textContent = daysToNext === 365 ? '🎂 Aaj tumhara birthday hai! Mubarak!' : '🎂 Agla birthday: ' + daysToNext + ' din mein';
+    document.getElementById('zodiacEmoji').textContent = zodiac.emoji;
+    document.getElementById('zodiacName').textContent = zodiac.sign;
+    document.getElementById('zodiacDates').textContent = zodiac.dates;
+
+    document.getElementById('resultBox').style.display = 'block';
+    document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
