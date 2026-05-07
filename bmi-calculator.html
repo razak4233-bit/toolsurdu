@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YuMe3hHGYiFxAMv0M11YgiNrV1Zrnv3Xl1gnTtaLnd0" />
+<title>BMI Calculator Online Free - بی ایم آئی کیلکولیٹر | ToolsUrdu</title>
+<meta name="description" content="Free online BMI calculator Pakistan. Apna Body Mass Index calculate karo aur janو aap healthy hain ya nahi. Urdu mein result - bilkul free!">
+<meta name="keywords" content="BMI calculator, BMI calculator Pakistan, body mass index, weight calculator, height weight calculator, بی ایم آئی, healthy weight Pakistan">
+<link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/bmi-calculator.html">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
+  header { background: #1A1A2E; color: white; padding: 16px 20px; }
+  .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.4rem; font-weight: bold; text-decoration: none; color: white; }
+  .logo span { color: #a78bfa; }
+  nav a { color: #ccc; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+  nav a:hover { color: white; }
+  .breadcrumb { background: #f0f0f0; padding: 8px 20px; font-size: 0.82rem; color: #888; }
+  .breadcrumb a { color: #0F3460; text-decoration: none; }
+  .container { max-width: 860px; margin: 30px auto; padding: 0 20px; }
+  h1 { font-size: 1.8rem; color: #1A1A2E; margin-bottom: 6px; }
+  .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
+  .tool-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+
+  /* UNIT TOGGLE */
+  .unit-toggle { display: flex; background: #f0f0f0; border-radius: 10px; padding: 4px; margin-bottom: 24px; width: fit-content; }
+  .unit-btn { padding: 8px 24px; border: none; border-radius: 8px; cursor: pointer; font-size: 0.92rem; font-weight: bold; background: transparent; color: #888; transition: all 0.2s; }
+  .unit-btn.active { background: #1A1A2E; color: white; }
+
+  /* INPUTS */
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .input-group label { display: block; font-weight: bold; color: #1A1A2E; margin-bottom: 8px; font-size: 0.95rem; }
+  .input-wrap { position: relative; }
+  .input-wrap input {
+    width: 100%; padding: 12px 50px 12px 16px; border: 2px solid #e0e0e0;
+    border-radius: 10px; font-size: 1.1rem; outline: none; transition: border 0.2s;
+  }
+  .input-wrap input:focus { border-color: #0F3460; }
+  .input-unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #888; font-size: 0.88rem; font-weight: bold; }
+
+  /* CALCULATE BTN */
+  .btn-calc { width: 100%; padding: 14px; background: #1A1A2E; color: white; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+  .btn-calc:hover { background: #0F3460; }
+
+  /* RESULT */
+  .result-section { display: none; margin-top: 24px; }
+
+  .bmi-result-card { border-radius: 14px; padding: 24px; text-align: center; margin-bottom: 16px; }
+  .bmi-number { font-size: 4rem; font-weight: bold; line-height: 1; }
+  .bmi-category { font-size: 1.3rem; font-weight: bold; margin-top: 8px; }
+  .bmi-urdu { font-size: 1rem; margin-top: 4px; opacity: 0.85; }
+
+  /* BMI SCALE */
+  .bmi-scale { margin: 20px 0; }
+  .scale-bar { height: 20px; border-radius: 20px; background: linear-gradient(to right, #3b82f6 0%, #22c55e 30%, #f59e0b 55%, #ef4444 75%, #7c2d12 100%); position: relative; margin-bottom: 8px; }
+  .scale-needle { position: absolute; top: -4px; width: 4px; height: 28px; background: #1A1A2E; border-radius: 2px; transform: translateX(-50%); transition: left 0.5s; }
+  .scale-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: #888; }
+
+  /* STATS GRID */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .stat-card { background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 12px; padding: 14px; text-align: center; }
+  .stat-number { font-size: 1.3rem; font-weight: bold; color: #0F3460; }
+  .stat-label { font-size: 0.78rem; color: #888; margin-top: 4px; }
+
+  /* BMI TABLE */
+  .bmi-table { width: 100%; border-collapse: collapse; margin-top: 16px; border-radius: 10px; overflow: hidden; }
+  .bmi-table th { background: #1A1A2E; color: white; padding: 10px 14px; text-align: left; font-size: 0.88rem; }
+  .bmi-table td { padding: 10px 14px; font-size: 0.88rem; border-bottom: 1px solid #f0f0f0; }
+  .bmi-table tr:last-child td { border-bottom: none; }
+
+  .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
+  .feature-list { list-style: none; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+  .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+
+  footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
+  footer a { color: #0F3460; text-decoration: none; margin: 0 10px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.4rem; }
+    .input-grid { grid-template-columns: 1fr; }
+    .bmi-number { font-size: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">🛠️ Tools<span>Urdu</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › BMI Calculator
+</div>
+
+<div class="container">
+  <h1>⚖️ BMI Calculator — بی ایم آئی کیلکولیٹر</h1>
+  <p class="subtitle">Apna weight aur height daalo — foran janو aap healthy hain ya nahi!</p>
+
+  <div class="tool-box">
+
+    <!-- UNIT TOGGLE -->
+    <div class="unit-toggle">
+      <button class="unit-btn active" onclick="setUnit('metric', this)">Metric (kg/cm)</button>
+      <button class="unit-btn" onclick="setUnit('imperial', this)">Imperial (lb/ft)</button>
+    </div>
+
+    <!-- INPUTS -->
+    <div class="input-grid">
+      <div class="input-group">
+        <label>⚖️ Weight / وزن</label>
+        <div class="input-wrap">
+          <input type="number" id="weight" placeholder="70" min="1" max="500">
+          <span class="input-unit" id="weightUnit">kg</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label>📏 Height / قد</label>
+        <div class="input-wrap">
+          <input type="number" id="height" placeholder="170" min="1" max="300">
+          <span class="input-unit" id="heightUnit">cm</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-calc" onclick="calculateBMI()">⚖️ Apna BMI Calculate Karo</button>
+
+    <!-- RESULT -->
+    <div class="result-section" id="resultSection">
+
+      <div class="bmi-result-card" id="resultCard">
+        <div class="bmi-number" id="bmiNumber">0</div>
+        <div class="bmi-category" id="bmiCategory">-</div>
+        <div class="bmi-urdu" id="bmiUrdu">-</div>
+      </div>
+
+      <!-- SCALE -->
+      <div class="bmi-scale">
+        <div class="scale-bar">
+          <div class="scale-needle" id="needle" style="left:0%"></div>
+        </div>
+        <div class="scale-labels">
+          <span>Underweight<br>&lt;18.5</span>
+          <span>Normal<br>18.5-25</span>
+          <span>Overweight<br>25-30</span>
+          <span>Obese<br>&gt;30</span>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-grid" style="margin-top:20px;">
+        <div class="stat-card">
+          <div class="stat-number" id="idealWeight">-</div>
+          <div class="stat-label">Ideal Weight Range (kg)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="weightDiff">-</div>
+          <div class="stat-label">Healthy Weight Se Farq</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="bmiPrime">-</div>
+          <div class="stat-label">BMI Prime</div>
+        </div>
+      </div>
+
+      <!-- BMI TABLE -->
+      <table class="bmi-table" style="margin-top:20px;">
+        <thead>
+          <tr><th>BMI Range</th><th>Category</th><th>Urdu Matlab</th></tr>
+        </thead>
+        <tbody>
+          <tr style="background:#dbeafe"><td>&lt; 18.5</td><td>Underweight</td><td>وزن کم ہے</td></tr>
+          <tr style="background:#dcfce7"><td>18.5 – 24.9</td><td>Normal weight</td><td>وزن بالکل ٹھیک ہے ✓</td></tr>
+          <tr style="background:#fef9c3"><td>25.0 – 29.9</td><td>Overweight</td><td>وزن زیادہ ہے</td></tr>
+          <tr style="background:#fee2e2"><td>30.0 – 34.9</td><td>Obese (Class I)</td><td>موٹاپا - توجہ دیں</td></tr>
+          <tr style="background:#fecaca"><td>&gt; 35</td><td>Obese (Class II+)</td><td>موٹاپا - ڈاکٹر سے ملیں</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <div class="seo-box">
+    <h2>BMI Calculator Kya Hai? — بی ایم آئی کیا ہوتا ہے؟</h2>
+    <p>
+      BMI yani <strong>Body Mass Index</strong> ek number hai jo aapke weight aur height ke ratio se calculate hota hai. Yeh batata hai ke aap apni height ke hisaab se healthy weight range mein hain ya nahi. Pakistan mein doctors aur nutritionists bhi yahi formula use karte hain.
+    </p>
+    <p>
+      BMI formula hai: <strong>Weight (kg) ÷ Height² (m²)</strong>. Misaal ke taur par agar aapka weight 70kg hai aur height 170cm hai to BMI = 70 ÷ (1.70)² = 24.2 — jo normal range mein hai.
+    </p>
+    <h3>🌟 Khasiyatein:</h3>
+    <ul class="feature-list">
+      <li>Metric (kg/cm) aur Imperial (lb/ft) dono systems</li>
+      <li>Visual BMI scale — foran samajh mein aata hai</li>
+      <li>Ideal weight range batata hai</li>
+      <li>Urdu mein result — asaan samajh</li>
+      <li>BMI Prime bhi calculate hota hai</li>
+      <li>Bilkul free — koi registration nahi</li>
+    </ul>
+    <h3>❓ Aksar Pooche Jane Wale Sawal:</h3>
+    <div class="faq-item">
+      <div class="faq-q">Q: Healthy BMI kitna hona chahiye?</div>
+      <div class="faq-a">A: 18.5 se 24.9 ke darmiyan BMI normal aur healthy maana jata hai. 25 se upar overweight aur 30 se upar obese category hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya BMI Pakistani logon ke liye accurate hai?</div>
+      <div class="faq-a">A: WHO ke mutabiq Asian logon ke liye 23 se upar BMI overweight consider hota hai. Hamare tool mein standard international ranges use ki gayi hain.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Agar BMI high ho to kya karein?</div>
+      <div class="faq-a">A: Apne doctor ya nutritionist se milein. Regular exercise aur balanced diet se weight manage karna mumkin hai.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ToolsUrdu — Sab tools bilkul free hain</p>
+  <br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  let currentUnit = 'metric';
+
+  function setUnit(unit, btn) {
+    currentUnit = unit;
+    document.querySelectorAll('.unit-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (unit === 'metric') {
+      document.getElementById('weightUnit').textContent = 'kg';
+      document.getElementById('heightUnit').textContent = 'cm';
+      document.getElementById('weight').placeholder = '70';
+      document.getElementById('height').placeholder = '170';
+    } else {
+      document.getElementById('weightUnit').textContent = 'lb';
+      document.getElementById('heightUnit').textContent = 'inch';
+      document.getElementById('weight').placeholder = '154';
+      document.getElementById('height').placeholder = '67';
+    }
+    document.getElementById('weight').value = '';
+    document.getElementById('height').value = '';
+    document.getElementById('resultSection').style.display = 'none';
+  }
+
+  function calculateBMI() {
+    let weight = parseFloat(document.getElementById('weight').value);
+    let height = parseFloat(document.getElementById('height').value);
+
+    if (!weight || !height || weight <= 0 || height <= 0) {
+      alert('Sahi weight aur height daalo!'); return;
+    }
+
+    let weightKg = currentUnit === 'metric' ? weight : weight * 0.453592;
+    let heightM = currentUnit === 'metric' ? height / 100 : height * 0.0254;
+
+    const bmi = weightKg / (heightM * heightM);
+    const bmiRound = Math.round(bmi * 10) / 10;
+    const bmiPrime = Math.round((bmi / 25) * 100) / 100;
+
+    // Category
+    let category, urdu, color, bg, needlePos;
+    if (bmi < 18.5) {
+      category = 'Underweight'; urdu = 'آپ کا وزن کم ہے — غذائیت بڑھائیں';
+      color = '#1d4ed8'; bg = '#dbeafe'; needlePos = Math.max(2, (bmi / 18.5) * 22);
+    } else if (bmi < 25) {
+      category = 'Normal Weight ✓'; urdu = 'آپ بالکل صحت مند ہیں — شاباش!';
+      color = '#15803d'; bg = '#dcfce7'; needlePos = 22 + ((bmi - 18.5) / 6.5) * 25;
+    } else if (bmi < 30) {
+      category = 'Overweight'; urdu = 'آپ کا وزن زیادہ ہے — احتیاط کریں';
+      color = '#b45309'; bg = '#fef9c3'; needlePos = 47 + ((bmi - 25) / 5) * 20;
+    } else if (bmi < 35) {
+      category = 'Obese (Class I)'; urdu = 'موٹاپا — ڈاکٹر سے مشورہ کریں';
+      color = '#dc2626'; bg = '#fee2e2'; needlePos = 67 + ((bmi - 30) / 5) * 20;
+    } else {
+      category = 'Obese (Class II+)'; urdu = 'زیادہ موٹاپا — فوری توجہ دیں';
+      color = '#7f1d1d'; bg = '#fecaca'; needlePos = 90;
+    }
+
+    // Ideal weight
+    const idealMin = Math.round(18.5 * heightM * heightM * 10) / 10;
+    const idealMax = Math.round(24.9 * heightM * heightM * 10) / 10;
+    const diff = Math.round((weightKg - (idealMin + idealMax) / 2) * 10) / 10;
+
+    // Display
+    document.getElementById('bmiNumber').textContent = bmiRound;
+    document.getElementById('bmiCategory').textContent = category;
+    document.getElementById('bmiUrdu').textContent = urdu;
+    const card = document.getElementById('resultCard');
+    card.style.background = bg;
+    card.style.color = color;
+    document.getElementById('needle').style.left = Math.min(98, needlePos) + '%';
+    document.getElementById('idealWeight').textContent = idealMin + ' – ' + idealMax;
+    document.getElementById('weightDiff').textContent = (diff > 0 ? '+' : '') + diff + ' kg';
+    document.getElementById('bmiPrime').textContent = bmiPrime;
+    document.getElementById('resultSection').style.display = 'block';
+    document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+</script>
+</body>
+</html>
