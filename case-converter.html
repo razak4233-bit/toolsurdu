@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YuMe3hHGYiFxAMv0M11YgiNrV1Zrnv3Xl1gnTtaLnd0" />
+<title>Case Converter Online Free - ٹیکسٹ کیس بدلیں | ToolsUrdu</title>
+<meta name="description" content="Free online case converter tool. UPPERCASE, lowercase, Title Case, Sentence case mein text convert karo - bilkul free aur instant. Pakistan ka best case converter.">
+<meta name="keywords" content="case converter, uppercase converter, lowercase converter, title case, text converter online, free case converter Pakistan">
+<link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/case-converter.html">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
+  header { background: #1A1A2E; color: white; padding: 16px 20px; }
+  .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.4rem; font-weight: bold; text-decoration: none; color: white; }
+  .logo span { color: #a78bfa; }
+  nav a { color: #ccc; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+  nav a:hover { color: white; }
+  .breadcrumb { background: #f0f0f0; padding: 8px 20px; font-size: 0.82rem; color: #888; }
+  .breadcrumb a { color: #0F3460; text-decoration: none; }
+  .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+  h1 { font-size: 1.8rem; color: #1A1A2E; margin-bottom: 6px; }
+  .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
+  .tool-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 24px; margin-bottom: 24px; }
+
+  /* CASE BUTTONS */
+  .case-buttons { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-bottom: 20px; }
+  .case-btn {
+    padding: 12px 10px; border: 2px solid #e0e0e0; border-radius: 10px;
+    background: white; cursor: pointer; font-size: 0.88rem; font-weight: bold;
+    color: #333; transition: all 0.2s; text-align: center;
+  }
+  .case-btn:hover { border-color: #0F3460; background: #f0f4ff; color: #0F3460; }
+  .case-btn.active { border-color: #0F3460; background: #0F3460; color: white; }
+  .case-btn .example { font-size: 0.75rem; font-weight: normal; opacity: 0.8; margin-top: 3px; }
+
+  textarea {
+    width: 100%; height: 200px; border: 2px solid #e0e0e0; border-radius: 10px;
+    padding: 14px; font-size: 1rem; font-family: Arial, sans-serif;
+    resize: vertical; outline: none; transition: border 0.2s; line-height: 1.6;
+  }
+  textarea:focus { border-color: #0F3460; }
+
+  .text-label { font-weight: bold; color: #1A1A2E; margin-bottom: 8px; font-size: 0.95rem; display: block; }
+
+  .result-box { margin-top: 16px; }
+  .result-area {
+    width: 100%; min-height: 120px; border: 2px solid #e8edf5; border-radius: 10px;
+    padding: 14px; font-size: 1rem; font-family: Arial, sans-serif;
+    background: #f8faff; line-height: 1.6; word-break: break-word;
+    white-space: pre-wrap; color: #1A1A2E;
+  }
+
+  .btn-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+  .btn { padding: 10px 20px; border: none; border-radius: 8px; font-size: 0.92rem; cursor: pointer; font-weight: bold; transition: all 0.2s; }
+  .btn-primary { background: #1A1A2E; color: white; }
+  .btn-primary:hover { background: #0F3460; }
+  .btn-danger { background: #fee2e2; color: #dc2626; }
+  .btn-copy { background: #e0f2fe; color: #0369a1; }
+
+  /* STATS */
+  .stats-row { display: flex; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
+  .stat-chip { background: #f0f4ff; border-radius: 20px; padding: 6px 14px; font-size: 0.82rem; color: #0F3460; }
+
+  .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
+  .feature-list { list-style: none; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+  .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+
+  footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
+  footer a { color: #0F3460; text-decoration: none; margin: 0 10px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.4rem; }
+    .case-buttons { grid-template-columns: repeat(2, 1fr); }
+    .btn-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">🛠️ Tools<span>Urdu</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › Case Converter
+</div>
+
+<div class="container">
+  <h1>🔤 Case Converter — ٹیکسٹ کیس بدلیں</h1>
+  <p class="subtitle">Text ko UPPERCASE, lowercase, Title Case ya Sentence case mein instantly convert karo!</p>
+
+  <div class="tool-box">
+
+    <!-- CASE BUTTONS -->
+    <div class="case-buttons">
+      <button class="case-btn active" onclick="convertCase('upper', this)">
+        UPPERCASE
+        <div class="example">HELLO WORLD</div>
+      </button>
+      <button class="case-btn" onclick="convertCase('lower', this)">
+        lowercase
+        <div class="example">hello world</div>
+      </button>
+      <button class="case-btn" onclick="convertCase('title', this)">
+        Title Case
+        <div class="example">Hello World</div>
+      </button>
+      <button class="case-btn" onclick="convertCase('sentence', this)">
+        Sentence case
+        <div class="example">Hello world here</div>
+      </button>
+      <button class="case-btn" onclick="convertCase('alternate', this)">
+        aLtErNaTe CaSe
+        <div class="example">hElLo WoRlD</div>
+      </button>
+      <button class="case-btn" onclick="convertCase('inverse', this)">
+        iNVERSE cASE
+        <div class="example">hELLO wORLD</div>
+      </button>
+    </div>
+
+    <!-- INPUT -->
+    <span class="text-label">📝 Apna text yahan likho ya paste karo:</span>
+    <textarea id="inputText" placeholder="Yahan apna text paste karo... مثلاً: hello world pakistan" oninput="convertActive()"></textarea>
+
+    <!-- OUTPUT -->
+    <div class="result-box">
+      <span class="text-label" style="margin-top:16px;">✅ Converted Text:</span>
+      <div class="result-area" id="outputText">Upar text likho to yahan converted result aayega...</div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <span class="stat-chip" id="wordStat">Words: 0</span>
+      <span class="stat-chip" id="charStat">Characters: 0</span>
+      <span class="stat-chip" id="caseStat">Mode: UPPERCASE</span>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="copyOutput()">📋 Copy Result</button>
+      <button class="btn btn-danger" onclick="clearAll()">🗑️ Clear</button>
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <div class="seo-box">
+    <h2>Case Converter Kya Hai? — کیس کنورٹر کیا ہے؟</h2>
+    <p>
+      ToolsUrdu ka <strong>free online case converter</strong> aapke text ko alag alag cases mein convert karta hai — ek click mein! Chahe aapko UPPERCASE mein heading chahiye, ya lowercase mein email likhna ho, ya Title Case mein naam — sab kuch instant hota hai.
+    </p>
+    <p>
+      Students, writers, developers aur bloggers rozana yeh tool use karte hain. Copy paste ke baad wrong case fix karna — ab koi mushkil nahi!
+    </p>
+    <h3>🌟 Khasiyatein:</h3>
+    <ul class="feature-list">
+      <li>UPPERCASE — sab letters capital</li>
+      <li>lowercase — sab letters small</li>
+      <li>Title Case — har lafz ka pehla letter capital</li>
+      <li>Sentence case — sirf pehle lafz ka capital</li>
+      <li>Alternate Case — ek capital ek small alternating</li>
+      <li>Inverse Case — capital ko small, small ko capital karo</li>
+      <li>Instant result — type karte hi convert hota hai</li>
+      <li>One click copy — foran use karo</li>
+    </ul>
+    <h3>❓ Aksar Pooche Jane Wale Sawal:</h3>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya Urdu text bhi convert hoga?</div>
+      <div class="faq-a">A: Urdu script mein cases nahi hote, lekin Roman Urdu aur English text fully convert hota hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya copied text safe hai?</div>
+      <div class="faq-a">A: Bilkul! Aapka text sirf browser mein process hota hai, koi server par nahi jata.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Title Case aur Sentence Case mein kya farq hai?</div>
+      <div class="faq-a">A: Title Case mein har lafz ka pehla letter capital hota hai. Sentence Case mein sirf pehle lafz ka pehla letter capital hota hai.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ToolsUrdu — Sab tools bilkul free hain</p>
+  <br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  let activeMode = 'upper';
+
+  function convertCase(mode, btn) {
+    activeMode = mode;
+    document.querySelectorAll('.case-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const modeNames = {
+      upper: 'UPPERCASE', lower: 'lowercase', title: 'Title Case',
+      sentence: 'Sentence case', alternate: 'aLtErNaTe', inverse: 'iNVERSE'
+    };
+    document.getElementById('caseStat').textContent = 'Mode: ' + modeNames[mode];
+    convertActive();
+  }
+
+  function convertActive() {
+    const text = document.getElementById('inputText').value;
+    const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+    document.getElementById('wordStat').textContent = 'Words: ' + words;
+    document.getElementById('charStat').textContent = 'Characters: ' + text.length;
+
+    if (text.trim() === '') {
+      document.getElementById('outputText').textContent = 'Upar text likho to yahan converted result aayega...';
+      return;
+    }
+
+    let result = '';
+    switch (activeMode) {
+      case 'upper': result = text.toUpperCase(); break;
+      case 'lower': result = text.toLowerCase(); break;
+      case 'title':
+        result = text.toLowerCase().replace(/(?:^|\s|[-])\S/g, c => c.toUpperCase()); break;
+      case 'sentence':
+        result = text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase()); break;
+      case 'alternate':
+        result = text.split('').map((c, i) => i % 2 === 0 ? c.toLowerCase() : c.toUpperCase()).join(''); break;
+      case 'inverse':
+        result = text.split('').map(c => c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()).join(''); break;
+    }
+    document.getElementById('outputText').textContent = result;
+  }
+
+  function copyOutput() {
+    const text = document.getElementById('outputText').textContent;
+    if (text.includes('Upar text')) return;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.querySelector('.btn-primary');
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => btn.textContent = '📋 Copy Result', 2000);
+    });
+  }
+
+  function clearAll() {
+    document.getElementById('inputText').value = '';
+    document.getElementById('outputText').textContent = 'Upar text likho to yahan converted result aayega...';
+    document.getElementById('wordStat').textContent = 'Words: 0';
+    document.getElementById('charStat').textContent = 'Characters: 0';
+  }
+</script>
+</body>
+</html>
