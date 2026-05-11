@@ -7,7 +7,76 @@
 <title>Case Converter Online Free - ٹیکسٹ کیس بدلیں | ToolsUrdu</title>
 <meta name="description" content="Free online case converter tool. UPPERCASE, lowercase, Title Case, Sentence case mein text convert karo - bilkul free aur instant. Pakistan ka best case converter.">
 <meta name="keywords" content="case converter, uppercase converter, lowercase converter, title case, text converter online, free case converter Pakistan">
+<meta property="og:title" content="Case Converter Online Free | ToolsUrdu">
+<meta property="og:description" content="UPPERCASE, lowercase, Title Case — text ko kisi bhi case mein ek click mein convert karo. Bilkul free!">
+<meta property="og:url" content="https://razak4233-bit.github.io/toolsurdu/case-converter.html">
 <link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/case-converter.html">
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Case Converter Online Free - ToolsUrdu",
+  "url": "https://razak4233-bit.github.io/toolsurdu/case-converter.html",
+  "description": "Free online case converter. UPPERCASE, lowercase, Title Case, Sentence case, Alternate case aur Inverse case mein text instantly convert karo.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PKR"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "ToolsUrdu",
+    "url": "https://razak4233-bit.github.io/toolsurdu/"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Case converter kya hota hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Case converter ek online tool hai jo aapke text ko UPPERCASE, lowercase, Title Case, Sentence case ya doosre formats mein ek click mein convert karta hai. Yeh writers, students aur developers ke liye bahut useful hai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Title Case aur Sentence Case mein kya farq hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Title Case mein har lafz ka pehla letter capital hota hai — jaise 'Hello World Pakistan'. Sentence Case mein sirf pehle lafz ka pehla letter capital hota hai — jaise 'Hello world pakistan'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kya Urdu text bhi convert hoga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Urdu script mein uppercase aur lowercase ka concept nahi hota, lekin Roman Urdu aur English text fully convert hota hai. Aap mix text bhi paste kar sakte hain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kya yeh tool bilkul free hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haan, bilkul free hai. Koi account banana nahi, koi payment nahi, koi limit nahi. ToolsUrdu ke sab tools hamesha free hain."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
@@ -24,7 +93,6 @@
   .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
   .tool-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 24px; margin-bottom: 24px; }
 
-  /* CASE BUTTONS */
   .case-buttons { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-bottom: 20px; }
   .case-btn {
     padding: 12px 10px; border: 2px solid #e0e0e0; border-radius: 10px;
@@ -43,7 +111,6 @@
   textarea:focus { border-color: #0F3460; }
 
   .text-label { font-weight: bold; color: #1A1A2E; margin-bottom: 8px; font-size: 0.95rem; display: block; }
-
   .result-box { margin-top: 16px; }
   .result-area {
     width: 100%; min-height: 120px; border: 2px solid #e8edf5; border-radius: 10px;
@@ -59,20 +126,47 @@
   .btn-danger { background: #fee2e2; color: #dc2626; }
   .btn-copy { background: #e0f2fe; color: #0369a1; }
 
-  /* STATS */
   .stats-row { display: flex; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
   .stat-chip { background: #f0f4ff; border-radius: 20px; padding: 6px 14px; font-size: 0.82rem; color: #0F3460; }
 
   .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
   .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 20px 0 8px; }
   .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
-  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
   .feature-list { list-style: none; }
-  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; border-bottom: 1px solid #f5f5f5; }
   .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+
+  /* Case types explanation cards */
+  .case-types { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+  .case-type-card { background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; }
+  .case-type-card h4 { font-size: 0.9rem; color: #0F3460; margin-bottom: 6px; }
+  .case-type-card .example-text { font-family: monospace; background: #eef3ff; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; color: #1A1A2E; margin-bottom: 6px; display: inline-block; }
+  .case-type-card p { font-size: 0.8rem; color: #777; line-height: 1.5; }
+
+  /* Use cases */
+  .use-cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+  .use-case-card { background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; }
+  .use-case-card .icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .use-case-card h4 { font-size: 0.9rem; color: #1A1A2E; margin-bottom: 4px; }
+  .use-case-card p { font-size: 0.8rem; color: #777; line-height: 1.5; }
+
+  .info-box { background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: 0.9rem; color: #92400e; line-height: 1.7; }
+
   .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-item:last-child { border-bottom: none; }
   .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
-  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.7; }
+
+  /* Related tools */
+  .related-tools { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .related-tools h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .tool-link { display: block; background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; text-decoration: none; transition: all 0.2s; }
+  .tool-link:hover { border-color: #0F3460; background: #eef3ff; }
+  .tool-link .t-icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .tool-link .t-name { font-size: 0.9rem; font-weight: bold; color: #1A1A2E; }
+  .tool-link .t-desc { font-size: 0.78rem; color: #888; margin-top: 3px; }
 
   footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
   footer a { color: #0F3460; text-decoration: none; margin: 0 10px; }
@@ -81,10 +175,11 @@
     h1 { font-size: 1.4rem; }
     .case-buttons { grid-template-columns: repeat(2, 1fr); }
     .btn-row { flex-direction: column; }
+    .case-types { grid-template-columns: 1fr 1fr; }
+    .use-cases { grid-template-columns: 1fr 1fr; }
   }
 </style>
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553186936074537"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553186936074537" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -108,8 +203,6 @@
   <p class="subtitle">Text ko UPPERCASE, lowercase, Title Case ya Sentence case mein instantly convert karo!</p>
 
   <div class="tool-box">
-
-    <!-- CASE BUTTONS -->
     <div class="case-buttons">
       <button class="case-btn active" onclick="convertCase('upper', this)">
         UPPERCASE
@@ -137,17 +230,14 @@
       </button>
     </div>
 
-    <!-- INPUT -->
     <span class="text-label">📝 Apna text yahan likho ya paste karo:</span>
     <textarea id="inputText" placeholder="Yahan apna text paste karo... مثلاً: hello world pakistan" oninput="convertActive()"></textarea>
 
-    <!-- OUTPUT -->
     <div class="result-box">
       <span class="text-label" style="margin-top:16px;">✅ Converted Text:</span>
       <div class="result-area" id="outputText">Upar text likho to yahan converted result aayega...</div>
     </div>
 
-    <!-- STATS -->
     <div class="stats-row">
       <span class="stat-chip" id="wordStat">Words: 0</span>
       <span class="stat-chip" id="charStat">Characters: 0</span>
@@ -164,36 +254,160 @@
   <div class="seo-box">
     <h2>Case Converter Kya Hai? — کیس کنورٹر کیا ہے؟</h2>
     <p>
-      ToolsUrdu ka <strong>free online case converter</strong> aapke text ko alag alag cases mein convert karta hai — ek click mein! Chahe aapko UPPERCASE mein heading chahiye, ya lowercase mein email likhna ho, ya Title Case mein naam — sab kuch instant hota hai.
+      ToolsUrdu ka <strong>free online case converter</strong> aapke text ko 6 alag alag cases mein convert karta hai — sirf ek click mein! Chahe aapko heading ke liye UPPERCASE chahiye, email ke liye lowercase, ya article title ke liye Title Case — sab kuch instantly ho jata hai bina koi effort ke.
     </p>
     <p>
-      Students, writers, developers aur bloggers rozana yeh tool use karte hain. Copy paste ke baad wrong case fix karna — ab koi mushkil nahi!
+      Pakistan mein students, writers, developers, bloggers aur freelancers rozana case converter use karte hain. Jab aap kisi aur jagah se text copy karte hain aur uska case galat hota hai — yeh tool ek second mein theek kar deta hai. Koi typing nahi, koi mehnat nahi — sirf paste karo aur convert karo.
     </p>
-    <h3>🌟 Khasiyatein:</h3>
-    <ul class="feature-list">
-      <li>UPPERCASE — sab letters capital</li>
-      <li>lowercase — sab letters small</li>
-      <li>Title Case — har lafz ka pehla letter capital</li>
-      <li>Sentence case — sirf pehle lafz ka capital</li>
-      <li>Alternate Case — ek capital ek small alternating</li>
-      <li>Inverse Case — capital ko small, small ko capital karo</li>
-      <li>Instant result — type karte hi convert hota hai</li>
-      <li>One click copy — foran use karo</li>
-    </ul>
-    <h3>❓ Aksar Pooche Jane Wale Sawal:</h3>
-    <div class="faq-item">
-      <div class="faq-q">Q: Kya Urdu text bhi convert hoga?</div>
-      <div class="faq-a">A: Urdu script mein cases nahi hote, lekin Roman Urdu aur English text fully convert hota hai.</div>
+
+    <h3>🔡 6 Case Types — Tamam Cases Ki Wazahat</h3>
+    <div class="case-types">
+      <div class="case-type-card">
+        <h4>UPPERCASE</h4>
+        <span class="example-text">HELLO WORLD</span>
+        <p>Sab letters capital ho jate hain. Headings, titles, aur emphasis ke liye use hota hai.</p>
+      </div>
+      <div class="case-type-card">
+        <h4>lowercase</h4>
+        <span class="example-text">hello world</span>
+        <p>Sab letters small ho jate hain. Emails, usernames aur code mein useful hai.</p>
+      </div>
+      <div class="case-type-card">
+        <h4>Title Case</h4>
+        <span class="example-text">Hello World</span>
+        <p>Har lafz ka pehla letter capital. Book titles, headings aur names ke liye perfect.</p>
+      </div>
+      <div class="case-type-card">
+        <h4>Sentence case</h4>
+        <span class="example-text">Hello world</span>
+        <p>Sirf pehle lafz ka capital. Normal writing aur paragraphs ke liye sahi format.</p>
+      </div>
+      <div class="case-type-card">
+        <h4>aLtErNaTe CaSe</h4>
+        <span class="example-text">hElLo WoRlD</span>
+        <p>Ek chota ek bada — funny aur meme-style text ke liye use hota hai.</p>
+      </div>
+      <div class="case-type-card">
+        <h4>iNVERSE cASE</h4>
+        <span class="example-text">hELLO wORLD</span>
+        <p>Jo capital tha woh small, jo small tha woh capital. Text reverse karne ke liye.</p>
+      </div>
     </div>
+
+    <h3>🌟 Is Tool Ki Khasiyatein</h3>
+    <ul class="feature-list">
+      <li>6 alag alag case types — UPPER, lower, Title, Sentence, Alternate, Inverse</li>
+      <li>Instant conversion — button dabate hi result aata hai</li>
+      <li>Live word aur character count — paste karte hi pata chalta hai</li>
+      <li>One click copy — converted text foran copy karo</li>
+      <li>English aur Roman Urdu dono support karta hai</li>
+      <li>Bilkul free — koi account, koi payment, koi limit nahi</li>
+      <li>100% secure — text sirf aapke browser mein process hota hai</li>
+      <li>Mobile friendly — phone par bhi perfectly kaam karta hai</li>
+    </ul>
+
+    <h3>🎯 Kab Use Karein — مختلف استعمال</h3>
+    <div class="use-cases">
+      <div class="use-case-card">
+        <div class="icon">🎓</div>
+        <h4>Students ke liye</h4>
+        <p>Assignment headings Title Case mein likhni hon ya essay proper Sentence case mein format karna ho.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">💻</div>
+        <h4>Developers ke liye</h4>
+        <p>Variable names, function names ya constants ke liye case convert karna — coding mein daily zaroorat.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">✍️</div>
+        <h4>Bloggers ke liye</h4>
+        <p>Article titles ko Title Case mein, meta descriptions ko Sentence case mein format karo asani se.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">📱</div>
+        <h4>Social Media ke liye</h4>
+        <p>CAPS LOCK mein post likhni ho ya stylish alternate case mein — ek click mein ready.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      💡 <strong>Pro Tip:</strong> Blog ya article ka title hamesha Title Case mein likho — yeh professional lagta hai aur SEO ke liye bhi better hai. Example: "Pakistan Ka Best Online Tool" — yeh "pakistan ka best online tool" se zyada attractive hai!
+    </div>
+
+    <h3>📖 Kaise Use Karein — استعمال کا طریقہ</h3>
+    <p>
+      Upar text box mein apna text paste karo ya directly likhna shuru karo. Phir upar diye gaye 6 buttons mein se apna pasandida case select karo — result neeche foran aa jaye ga. "Copy Result" button se converted text copy karo aur jahan chahein paste karo. Koi save button nahi dabana, koi wait nahi — bilkul instant!
+    </p>
+
+    <h3>❓ Aksar Pooche Jane Wale Sawal — FAQ</h3>
+
     <div class="faq-item">
-      <div class="faq-q">Q: Kya copied text safe hai?</div>
-      <div class="faq-a">A: Bilkul! Aapka text sirf browser mein process hota hai, koi server par nahi jata.</div>
+      <div class="faq-q">Q: Case converter kya hota hai aur kyun use karte hain?</div>
+      <div class="faq-a">A: Case converter ek online tool hai jo text ke letters ka case badal deta hai — jaise sab ko capital banana ya sab ko small karna. Jab kisi aur jagah se text copy karo aur format galat ho, ya jab heading ya title ka case theek karna ho, tab yeh tool bohot kaam aata hai.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q: Title Case aur Sentence Case mein kya farq hai?</div>
-      <div class="faq-a">A: Title Case mein har lafz ka pehla letter capital hota hai. Sentence Case mein sirf pehle lafz ka pehla letter capital hota hai.</div>
+      <div class="faq-a">A: Title Case mein har lafz ka pehla letter capital hota hai — jaise "Hello World Pakistan". Sentence Case mein sirf poore sentence ka pehla letter capital hota hai — jaise "Hello world pakistan". Title Case zyada tar headings ke liye use hota hai, Sentence Case normal writing ke liye.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya Urdu text bhi convert hoga?</div>
+      <div class="faq-a">A: Urdu script (nastaliq) mein uppercase aur lowercase ka concept nahi hota, isliye Urdu text convert nahi hoga. Lekin Roman Urdu (English haroof mein likhi Urdu) aur English text fully convert hota hai. Mixed text bhi kaam karta hai — sirf English/Roman part convert hoga.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya yeh tool bilkul free hai?</div>
+      <div class="faq-a">A: Haan, bilkul free hai. Koi account banana nahi, koi payment nahi, koi limit nahi. ToolsUrdu ke sab tools hamesha free hain.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Mera text safe hai? Koi server pe jata hai kya?</div>
+      <div class="faq-a">A: Bilkul safe hai. Aapka text sirf aapke browser mein process hota hai — koi data hamare ya kisi bhi server pe nahi jata. Aapka confidential ya personal text completely private rehta hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kitna text paste kar sakte hain?</div>
+      <div class="faq-a">A: Koi limit nahi — chota sentence ho ya poora article, sab convert ho jata hai. Tool browser mein run hota hai toh practically unlimited text handle kar sakta hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Alternate Case aur Inverse Case ka kya use hai?</div>
+      <div class="faq-a">A: Alternate Case (hElLo WoRlD) zyada tar fun, memes, ya social media pe stylish posts ke liye use hota hai. Inverse Case (hELLO wORLD) tab use hota hai jab aapko CAPS LOCK galti se on tha aur text ulta likh gaya — yeh ek click mein sahi kar deta hai.</div>
     </div>
   </div>
+
+  <!-- RELATED TOOLS -->
+  <div class="related-tools">
+    <h2>🔧 Hamare Doosre Tools — مزید ٹولز</h2>
+    <div class="tools-grid">
+      <a href="word-counter.html" class="tool-link">
+        <div class="t-icon">📊</div>
+        <div class="t-name">Word Counter</div>
+        <div class="t-desc">Words, characters, sentences count karo</div>
+      </a>
+      <a href="age-calculator.html" class="tool-link">
+        <div class="t-icon">🎂</div>
+        <div class="t-name">Age Calculator</div>
+        <div class="t-desc">Apni exact age seconds tak janiye</div>
+      </a>
+      <a href="password-generator.html" class="tool-link">
+        <div class="t-icon">🔐</div>
+        <div class="t-name">Password Generator</div>
+        <div class="t-desc">Strong secure password banao</div>
+      </a>
+      <a href="bmi-calculator.html" class="tool-link">
+        <div class="t-icon">⚖️</div>
+        <div class="t-name">BMI Calculator</div>
+        <div class="t-desc">Body Mass Index check karo</div>
+      </a>
+      <a href="percentage-calculator.html" class="tool-link">
+        <div class="t-icon">📊</div>
+        <div class="t-name">Percentage Calculator</div>
+        <div class="t-desc">Marks, discount, percentage calculate karo</div>
+      </a>
+      <a href="qr-generator.html" class="tool-link">
+        <div class="t-icon">📱</div>
+        <div class="t-name">QR Code Generator</div>
+        <div class="t-desc">Website ya WhatsApp ka QR banao</div>
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <footer>
