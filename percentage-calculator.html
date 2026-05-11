@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YuMe3hHGYiFxAMv0M11YgiNrV1Zrnv3Xl1gnTtaLnd0" />
+<meta name="google-adsense-account" content="ca-pub-6553186936074537">
+<title>Percentage Calculator Online Free - فیصد کیلکولیٹر | ToolsUrdu</title>
+<meta name="description" content="Free online percentage calculator Pakistan. Percentage nikalo, percentage change calculate karo, marks ka percentage nikalo - bilkul free aur instant. Urdu mein!">
+<meta name="keywords" content="percentage calculator, percentage calculator Pakistan, faisad calculator, marks percentage, discount calculator, فیصد کیلکولیٹر">
+<link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/percentage-calculator.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553186936074537" crossorigin="anonymous"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
+  header { background: #1A1A2E; color: white; padding: 16px 20px; }
+  .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.4rem; font-weight: bold; text-decoration: none; color: white; }
+  .logo span { color: #a78bfa; }
+  nav a { color: #ccc; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+  nav a:hover { color: white; }
+  .breadcrumb { background: #f0f0f0; padding: 8px 20px; font-size: 0.82rem; color: #888; }
+  .breadcrumb a { color: #0F3460; text-decoration: none; }
+  .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+  h1 { font-size: 1.8rem; color: #1A1A2E; margin-bottom: 6px; }
+  .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
+
+  /* TABS */
+  .tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .tab-btn { padding: 10px 18px; border: 2px solid #e0e0e0; border-radius: 10px; background: white; cursor: pointer; font-size: 0.88rem; font-weight: bold; color: #666; transition: all 0.2s; }
+  .tab-btn:hover { border-color: #0F3460; color: #0F3460; }
+  .tab-btn.active { border-color: #0F3460; background: #0F3460; color: white; }
+
+  .tool-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  .calc-title { font-size: 1.1rem; font-weight: bold; color: #1A1A2E; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+
+  .input-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  .input-group { flex: 1; min-width: 120px; }
+  .input-group label { display: block; font-size: 0.85rem; color: #666; margin-bottom: 5px; }
+  .input-wrap { position: relative; }
+  .input-wrap input { width: 100%; padding: 11px 40px 11px 14px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; outline: none; transition: border 0.2s; }
+  .input-wrap input:focus { border-color: #0F3460; }
+  .input-unit { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #888; font-size: 0.85rem; font-weight: bold; }
+  .operator { font-size: 1.4rem; color: #888; font-weight: bold; padding-top: 20px; }
+
+  .btn-calc { width: 100%; padding: 13px; background: #0F3460; color: white; border: none; border-radius: 10px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.2s; margin-top: 6px; }
+  .btn-calc:hover { background: #1A1A2E; }
+
+  .result-card { background: linear-gradient(135deg, #0F3460, #1A1A2E); border-radius: 12px; padding: 20px; text-align: center; color: white; margin-top: 16px; display: none; }
+  .result-number { font-size: 3rem; font-weight: bold; line-height: 1; }
+  .result-label { font-size: 0.95rem; color: #a78bfa; margin-top: 6px; }
+  .result-detail { font-size: 0.85rem; color: #ccc; margin-top: 8px; }
+
+  /* MARKS CALCULATOR */
+  .marks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+
+  .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
+  .feature-list { list-style: none; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+  .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+
+  footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
+  footer a { color: #0F3460; text-decoration: none; margin: 0 10px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.4rem; }
+    .marks-grid { grid-template-columns: 1fr; }
+    .input-row { flex-direction: column; align-items: stretch; }
+    .operator { padding-top: 0; text-align: center; }
+    .result-number { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">🛠️ Tools<span>Urdu</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › Percentage Calculator
+</div>
+
+<div class="container">
+  <h1>📊 Percentage Calculator — فیصد کیلکولیٹر</h1>
+  <p class="subtitle">Percentage calculate karo — marks, discount, percentage change — sab kuch ek jagah!</p>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('basic')">📊 Basic %</button>
+    <button class="tab-btn" onclick="showTab('marks')">📝 Marks %</button>
+    <button class="tab-btn" onclick="showTab('change')">📈 % Change</button>
+    <button class="tab-btn" onclick="showTab('discount')">🏷️ Discount</button>
+    <button class="tab-btn" onclick="showTab('reverse')">🔄 Reverse %</button>
+  </div>
+
+  <div class="tool-box">
+
+    <!-- BASIC -->
+    <div class="tab-content active" id="tab-basic">
+      <div class="calc-title">📊 Basic Percentage — X ka Y% kitna hoga?</div>
+      <div class="input-row">
+        <div class="input-group">
+          <label>Number (X)</label>
+          <div class="input-wrap">
+            <input type="number" id="b-number" placeholder="500">
+          </div>
+        </div>
+        <div class="operator">×</div>
+        <div class="input-group">
+          <label>Percentage (Y%)</label>
+          <div class="input-wrap">
+            <input type="number" id="b-percent" placeholder="20">
+            <span class="input-unit">%</span>
+          </div>
+        </div>
+      </div>
+      <button class="btn-calc" onclick="calcBasic()">Calculate Karo</button>
+      <div class="result-card" id="r-basic">
+        <div class="result-number" id="r-basic-num">0</div>
+        <div class="result-label" id="r-basic-label">Result</div>
+        <div class="result-detail" id="r-basic-detail"></div>
+      </div>
+    </div>
+
+    <!-- MARKS -->
+    <div class="tab-content" id="tab-marks">
+      <div class="calc-title">📝 Marks Percentage — Apne marks ka % nikalo</div>
+      <div class="marks-grid">
+        <div class="input-group">
+          <label>Obtained Marks (Mile hue marks)</label>
+          <div class="input-wrap">
+            <input type="number" id="m-obtained" placeholder="450">
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Total Marks (Kul marks)</label>
+          <div class="input-wrap">
+            <input type="number" id="m-total" placeholder="500">
+          </div>
+        </div>
+      </div>
+      <button class="btn-calc" onclick="calcMarks()">Percentage Nikalo</button>
+      <div class="result-card" id="r-marks">
+        <div class="result-number" id="r-marks-num">0%</div>
+        <div class="result-label" id="r-marks-grade">Grade</div>
+        <div class="result-detail" id="r-marks-detail"></div>
+      </div>
+    </div>
+
+    <!-- CHANGE -->
+    <div class="tab-content" id="tab-change">
+      <div class="calc-title">📈 Percentage Change — Kitna barhа ya ghata?</div>
+      <div class="input-row">
+        <div class="input-group">
+          <label>Pehle ki value</label>
+          <div class="input-wrap">
+            <input type="number" id="c-old" placeholder="1000">
+          </div>
+        </div>
+        <div class="operator">→</div>
+        <div class="input-group">
+          <label>Baad ki value</label>
+          <div class="input-wrap">
+            <input type="number" id="c-new" placeholder="1200">
+          </div>
+        </div>
+      </div>
+      <button class="btn-calc" onclick="calcChange()">Change Nikalo</button>
+      <div class="result-card" id="r-change">
+        <div class="result-number" id="r-change-num">0%</div>
+        <div class="result-label" id="r-change-label">Change</div>
+        <div class="result-detail" id="r-change-detail"></div>
+      </div>
+    </div>
+
+    <!-- DISCOUNT -->
+    <div class="tab-content" id="tab-discount">
+      <div class="calc-title">🏷️ Discount Calculator — Sale price kya hogi?</div>
+      <div class="input-row">
+        <div class="input-group">
+          <label>Original Price (Asli qeemat)</label>
+          <div class="input-wrap">
+            <input type="number" id="d-price" placeholder="5000">
+            <span class="input-unit">Rs</span>
+          </div>
+        </div>
+        <div class="operator">−</div>
+        <div class="input-group">
+          <label>Discount %</label>
+          <div class="input-wrap">
+            <input type="number" id="d-discount" placeholder="20">
+            <span class="input-unit">%</span>
+          </div>
+        </div>
+      </div>
+      <button class="btn-calc" onclick="calcDiscount()">Sale Price Nikalo</button>
+      <div class="result-card" id="r-discount">
+        <div class="result-number" id="r-discount-num">Rs 0</div>
+        <div class="result-label">Sale Price — آپ کو یہ قیمت ملے گی</div>
+        <div class="result-detail" id="r-discount-detail"></div>
+      </div>
+    </div>
+
+    <!-- REVERSE -->
+    <div class="tab-content" id="tab-reverse">
+      <div class="calc-title">🔄 Reverse Percentage — X, Y ka kitna % hai?</div>
+      <div class="input-row">
+        <div class="input-group">
+          <label>Value (X)</label>
+          <div class="input-wrap">
+            <input type="number" id="rv-part" placeholder="25">
+          </div>
+        </div>
+        <div class="operator">÷</div>
+        <div class="input-group">
+          <label>Total (Y)</label>
+          <div class="input-wrap">
+            <input type="number" id="rv-total" placeholder="200">
+          </div>
+        </div>
+      </div>
+      <button class="btn-calc" onclick="calcReverse()">% Nikalo</button>
+      <div class="result-card" id="r-reverse">
+        <div class="result-number" id="r-reverse-num">0%</div>
+        <div class="result-label" id="r-reverse-label">Percentage</div>
+        <div class="result-detail" id="r-reverse-detail"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SEO -->
+  <div class="seo-box">
+    <h2>Percentage Calculator Kya Hai? — فیصد کیلکولیٹر</h2>
+    <p>
+      ToolsUrdu ka <strong>free online percentage calculator</strong> Pakistan mein students, teachers, businessmen aur ghar par kaam karne walon ke liye best tool hai. Marks ka percentage nikalna ho, discount calculate karna ho, ya salary mein izafa — sab kuch ek jagah!
+    </p>
+    <h3>🌟 Khasiyatein:</h3>
+    <ul class="feature-list">
+      <li>5 alag alag percentage calculators ek jagah</li>
+      <li>Marks percentage + grade automatically nikalta hai</li>
+      <li>Discount calculator — sale price foran pata chale</li>
+      <li>Percentage change — kitna barha ya ghata</li>
+      <li>Bilkul free — koi registration nahi</li>
+      <li>Mobile friendly — phone par bhi perfect</li>
+    </ul>
+    <h3>❓ Aksar Pooche Jane Wale Sawal:</h3>
+    <div class="faq-item">
+      <div class="faq-q">Q: Marks ka percentage kaise nikalen?</div>
+      <div class="faq-a">A: "Marks %" tab mein apne obtained marks aur total marks daalo — percentage aur grade foran aa jayega.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Discount ke baad price kaise pata karen?</div>
+      <div class="faq-a">A: "Discount" tab mein original price aur discount % daalo — final sale price aa jayegi.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Percentage change ka matlab kya hai?</div>
+      <div class="faq-a">A: Agar salary 10,000 se 12,000 ho gayi to percentage change 20% increase hai. "% Change" tab mein calculate karo.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ToolsUrdu — Sab tools bilkul free hain</p>
+  <br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  function showTab(tab) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    event.target.classList.add('active');
+    // Hide all results
+    document.querySelectorAll('.result-card').forEach(r => r.style.display = 'none');
+  }
+
+  function showResult(id, number, label, detail) {
+    const card = document.getElementById(id);
+    card.style.display = 'block';
+    if (id === 'r-basic') {
+      document.getElementById('r-basic-num').textContent = number;
+      document.getElementById('r-basic-label').textContent = label;
+      document.getElementById('r-basic-detail').textContent = detail;
+    } else if (id === 'r-marks') {
+      document.getElementById('r-marks-num').textContent = number;
+      document.getElementById('r-marks-grade').textContent = label;
+      document.getElementById('r-marks-detail').textContent = detail;
+    } else if (id === 'r-change') {
+      document.getElementById('r-change-num').textContent = number;
+      document.getElementById('r-change-label').textContent = label;
+      document.getElementById('r-change-detail').textContent = detail;
+    } else if (id === 'r-discount') {
+      document.getElementById('r-discount-num').textContent = number;
+      document.getElementById('r-discount-detail').textContent = detail;
+    } else if (id === 'r-reverse') {
+      document.getElementById('r-reverse-num').textContent = number;
+      document.getElementById('r-reverse-label').textContent = label;
+      document.getElementById('r-reverse-detail').textContent = detail;
+    }
+  }
+
+  function calcBasic() {
+    const num = parseFloat(document.getElementById('b-number').value);
+    const pct = parseFloat(document.getElementById('b-percent').value);
+    if (isNaN(num) || isNaN(pct)) { alert('Sahi numbers daalo!'); return; }
+    const result = (num * pct) / 100;
+    showResult('r-basic', result.toFixed(2), `${num} ka ${pct}% = ${result.toFixed(2)}`, `Formula: ${num} × ${pct} ÷ 100 = ${result.toFixed(2)}`);
+  }
+
+  function calcMarks() {
+    const obtained = parseFloat(document.getElementById('m-obtained').value);
+    const total = parseFloat(document.getElementById('m-total').value);
+    if (isNaN(obtained) || isNaN(total) || total === 0) { alert('Sahi marks daalo!'); return; }
+    const pct = (obtained / total) * 100;
+    let grade = '';
+    if (pct >= 90) grade = '🏆 A+ Grade — Excellent!';
+    else if (pct >= 80) grade = '⭐ A Grade — Very Good!';
+    else if (pct >= 70) grade = '👍 B Grade — Good';
+    else if (pct >= 60) grade = '✅ C Grade — Average';
+    else if (pct >= 50) grade = '⚠️ D Grade — Pass';
+    else grade = '❌ Fail — Mehnat karo!';
+    showResult('r-marks', pct.toFixed(1) + '%', grade, `${obtained} ÷ ${total} × 100 = ${pct.toFixed(1)}%`);
+  }
+
+  function calcChange() {
+    const oldVal = parseFloat(document.getElementById('c-old').value);
+    const newVal = parseFloat(document.getElementById('c-new').value);
+    if (isNaN(oldVal) || isNaN(newVal) || oldVal === 0) { alert('Sahi values daalo!'); return; }
+    const change = ((newVal - oldVal) / oldVal) * 100;
+    const label = change >= 0 ? '📈 Izafa (Increase)' : '📉 Kami (Decrease)';
+    showResult('r-change', (change >= 0 ? '+' : '') + change.toFixed(2) + '%', label, `(${newVal} - ${oldVal}) ÷ ${oldVal} × 100 = ${change.toFixed(2)}%`);
+  }
+
+  function calcDiscount() {
+    const price = parseFloat(document.getElementById('d-price').value);
+    const disc = parseFloat(document.getElementById('d-discount').value);
+    if (isNaN(price) || isNaN(disc)) { alert('Sahi values daalo!'); return; }
+    const discAmount = (price * disc) / 100;
+    const salePrice = price - discAmount;
+    showResult('r-discount', 'Rs ' + salePrice.toFixed(0), '', `Discount: Rs ${discAmount.toFixed(0)} | Aap bachaye: Rs ${discAmount.toFixed(0)}`);
+  }
+
+  function calcReverse() {
+    const part = parseFloat(document.getElementById('rv-part').value);
+    const total = parseFloat(document.getElementById('rv-total').value);
+    if (isNaN(part) || isNaN(total) || total === 0) { alert('Sahi values daalo!'); return; }
+    const pct = (part / total) * 100;
+    showResult('r-reverse', pct.toFixed(2) + '%', `${part} = ${total} ka ${pct.toFixed(2)}%`, `Formula: ${part} ÷ ${total} × 100 = ${pct.toFixed(2)}%`);
+  }
+</script>
+</body>
+</html>
