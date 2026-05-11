@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YuMe3hHGYiFxAMv0M11YgiNrV1Zrnv3Xl1gnTtaLnd0" />
+<meta name="google-adsense-account" content="ca-pub-6553186936074537">
+<title>QR Code Generator Online Free - کیو آر کوڈ بنائیں | ToolsUrdu</title>
+<meta name="description" content="Free online QR code generator Pakistan. Apni website, WhatsApp number, text ya koi bhi link ka QR code banao - bilkul free aur instant download karo!">
+<meta name="keywords" content="QR code generator, QR code banana, free QR code Pakistan, QR code maker, WhatsApp QR code, کیو آر کوڈ">
+<link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/qr-generator.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553186936074537" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
+  header { background: #1A1A2E; color: white; padding: 16px 20px; }
+  .header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 1.4rem; font-weight: bold; text-decoration: none; color: white; }
+  .logo span { color: #a78bfa; }
+  nav a { color: #ccc; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+  nav a:hover { color: white; }
+  .breadcrumb { background: #f0f0f0; padding: 8px 20px; font-size: 0.82rem; color: #888; }
+  .breadcrumb a { color: #0F3460; text-decoration: none; }
+  .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+  h1 { font-size: 1.8rem; color: #1A1A2E; margin-bottom: 6px; }
+  .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
+  .tool-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+
+  /* TYPE TABS */
+  .type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 24px; }
+  .type-btn { padding: 12px 8px; border: 2px solid #e0e0e0; border-radius: 10px; background: white; cursor: pointer; font-size: 0.85rem; font-weight: bold; color: #666; transition: all 0.2s; text-align: center; }
+  .type-btn:hover { border-color: #0F3460; color: #0F3460; }
+  .type-btn.active { border-color: #0F3460; background: #0F3460; color: white; }
+  .type-btn .type-icon { font-size: 1.4rem; display: block; margin-bottom: 4px; }
+
+  /* INPUT */
+  .input-section { margin-bottom: 20px; }
+  .input-section label { display: block; font-weight: bold; color: #1A1A2E; margin-bottom: 8px; font-size: 0.95rem; }
+  .input-section input, .input-section textarea {
+    width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 10px;
+    font-size: 1rem; outline: none; transition: border 0.2s; font-family: Arial, sans-serif;
+  }
+  .input-section input:focus, .input-section textarea:focus { border-color: #0F3460; }
+  .input-section textarea { height: 100px; resize: vertical; }
+
+  /* OPTIONS */
+  .options-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .option-group label { display: block; font-size: 0.85rem; color: #666; margin-bottom: 6px; font-weight: bold; }
+  .option-group input[type="color"] { width: 100%; height: 40px; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; padding: 2px; }
+  .option-group input[type="range"] { width: 100%; accent-color: #0F3460; margin-top: 8px; }
+  .size-val { font-size: 0.82rem; color: #888; text-align: center; }
+  .option-group select { width: 100%; padding: 10px 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.9rem; outline: none; }
+  .option-group select:focus { border-color: #0F3460; }
+
+  /* GENERATE BTN */
+  .btn-generate { width: 100%; padding: 14px; background: #0F3460; color: white; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+  .btn-generate:hover { background: #1A1A2E; }
+
+  /* QR RESULT */
+  .qr-result { display: none; margin-top: 24px; text-align: center; }
+  .qr-box { background: white; border: 3px solid #e8edf5; border-radius: 16px; padding: 24px; display: inline-block; margin-bottom: 16px; }
+  #qrcode { display: inline-block; }
+  #qrcode img, #qrcode canvas { border-radius: 8px; }
+
+  .download-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-download { padding: 12px 24px; border: none; border-radius: 10px; font-size: 0.95rem; font-weight: bold; cursor: pointer; transition: all 0.2s; }
+  .btn-dl-png { background: #0F3460; color: white; }
+  .btn-dl-png:hover { background: #1A1A2E; }
+  .btn-new { background: #e0f2fe; color: #0369a1; }
+  .btn-new:hover { background: #bae6fd; }
+
+  .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
+  .feature-list { list-style: none; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+  .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+
+  footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
+  footer a { color: #0F3460; text-decoration: none; margin: 0 10px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.4rem; }
+    .options-row { grid-template-columns: 1fr; }
+    .type-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">🛠️ Tools<span>Urdu</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a> › QR Code Generator
+</div>
+
+<div class="container">
+  <h1>📱 QR Code Generator — کیو آر کوڈ بنائیں</h1>
+  <p class="subtitle">Kisi bhi website, number, ya text ka QR code banao — bilkul free aur download karo!</p>
+
+  <div class="tool-box">
+
+    <!-- TYPE SELECTION -->
+    <div class="type-grid">
+      <button class="type-btn active" onclick="setType('url', this)">
+        <span class="type-icon">🌐</span>Website URL
+      </button>
+      <button class="type-btn" onclick="setType('whatsapp', this)">
+        <span class="type-icon">💬</span>WhatsApp
+      </button>
+      <button class="type-btn" onclick="setType('text', this)">
+        <span class="type-icon">📝</span>Text
+      </button>
+      <button class="type-btn" onclick="setType('email', this)">
+        <span class="type-icon">📧</span>Email
+      </button>
+      <button class="type-btn" onclick="setType('phone', this)">
+        <span class="type-icon">📞</span>Phone
+      </button>
+      <button class="type-btn" onclick="setType('wifi', this)">
+        <span class="type-icon">📶</span>WiFi
+      </button>
+    </div>
+
+    <!-- INPUT SECTION -->
+    <div class="input-section" id="inputSection">
+      <label id="inputLabel">🌐 Website URL daalo:</label>
+      <input type="text" id="mainInput" placeholder="https://example.com">
+    </div>
+
+    <!-- WIFI SECTION (hidden by default) -->
+    <div id="wifiSection" style="display:none; margin-bottom:20px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+        <div>
+          <label style="display:block; font-size:0.85rem; color:#666; margin-bottom:6px; font-weight:bold;">WiFi Network Name (SSID)</label>
+          <input type="text" id="wifiSSID" placeholder="Mera WiFi" style="width:100%; padding:11px 14px; border:2px solid #e0e0e0; border-radius:10px; font-size:0.95rem; outline:none;">
+        </div>
+        <div>
+          <label style="display:block; font-size:0.85rem; color:#666; margin-bottom:6px; font-weight:bold;">WiFi Password</label>
+          <input type="text" id="wifiPass" placeholder="Password123" style="width:100%; padding:11px 14px; border:2px solid #e0e0e0; border-radius:10px; font-size:0.95rem; outline:none;">
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTIONS -->
+    <div class="options-row">
+      <div class="option-group">
+        <label>🎨 QR Color</label>
+        <input type="color" id="qrColor" value="#000000">
+      </div>
+      <div class="option-group">
+        <label>⬜ Background Color</label>
+        <input type="color" id="bgColor" value="#ffffff">
+      </div>
+      <div class="option-group">
+        <label>📏 Size: <span id="sizeVal">200</span>px</label>
+        <input type="range" id="sizeSlider" min="150" max="400" value="200" oninput="document.getElementById('sizeVal').textContent=this.value">
+      </div>
+    </div>
+
+    <button class="btn-generate" onclick="generateQR()">📱 QR Code Banao</button>
+
+    <!-- RESULT -->
+    <div class="qr-result" id="qrResult">
+      <div class="qr-box">
+        <div id="qrcode"></div>
+      </div>
+      <br>
+      <div class="download-row">
+        <button class="btn-download btn-dl-png" onclick="downloadQR()">⬇️ PNG Download Karo</button>
+        <button class="btn-download btn-new" onclick="resetQR()">🔄 Naya QR Banao</button>
+      </div>
+      <p style="color:#888; font-size:0.82rem; margin-top:12px;">✅ QR code ready — scan karo ya download karo!</p>
+    </div>
+
+  </div>
+
+  <!-- SEO -->
+  <div class="seo-box">
+    <h2>QR Code Generator Kya Hai? — کیو آر کوڈ کیا ہے؟</h2>
+    <p>
+      ToolsUrdu ka <strong>free online QR code generator</strong> Pakistan mein business owners, students aur freelancers ke liye perfect tool hai. QR code ek square barcode hota hai jo phone se scan karne par automatically website khol deta hai, WhatsApp chat shuru karta hai, ya WiFi se connect kar deta hai.
+    </p>
+    <p>
+      Pakistan mein QR codes ab har jagah use ho rahe hain — restaurants ke menus mein, business cards mein, dukano par — aur yeh sab bilkul free mein bana sakte ho hamare tool se!
+    </p>
+    <h3>🌟 Khasiyatein:</h3>
+    <ul class="feature-list">
+      <li>6 qism ke QR codes — URL, WhatsApp, Text, Email, Phone, WiFi</li>
+      <li>Custom colors — apni marzi ka rang chunno</li>
+      <li>Size adjust karo — 150px se 400px tak</li>
+      <li>PNG mein download karo — high quality</li>
+      <li>Bilkul free — koi account nahi</li>
+      <li>Mobile friendly — phone par bhi banao</li>
+    </ul>
+    <h3>❓ Aksar Pooche Jane Wale Sawal:</h3>
+    <div class="faq-item">
+      <div class="faq-q">Q: QR code kaise scan karte hain?</div>
+      <div class="faq-a">A: Android ya iPhone ka camera open karo aur QR code par point karo — automatically link ya information aa jayegi.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: WhatsApp ka QR code kaise banate hain?</div>
+      <div class="faq-a">A: "WhatsApp" type select karo aur apna Pakistan number daalo (03xxxxxxxxx format mein) — QR code ban jayega jo scan karne par directly WhatsApp chat khulega.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya QR code hamesha kaam karta hai?</div>
+      <div class="faq-a">A: Haan! Hamare tool se bana QR code permanently kaam karta hai — koi expiry nahi, koi server dependency nahi.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Business card ke liye QR code kaise banun?</div>
+      <div class="faq-a">A: Apni website URL ya WhatsApp number ka QR code banao, PNG download karo aur apne business card designer ko de do.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ToolsUrdu — Sab tools bilkul free hain</p>
+  <br>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  let currentType = 'url';
+
+  const typeConfig = {
+    url: { label: '🌐 Website URL daalo:', placeholder: 'https://example.com' },
+    whatsapp: { label: '💬 WhatsApp Number daalo (Pakistan: 03xxxxxxxxx):', placeholder: '03001234567' },
+    text: { label: '📝 Apna text daalo:', placeholder: 'Yahan koi bhi text likhو...' },
+    email: { label: '📧 Email address daalo:', placeholder: 'example@gmail.com' },
+    phone: { label: '📞 Phone number daalo:', placeholder: '03001234567' },
+    wifi: { label: '', placeholder: '' },
+  };
+
+  function setType(type, btn) {
+    currentType = type;
+    document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const wifiSec = document.getElementById('wifiSection');
+    const inputSec = document.getElementById('inputSection');
+
+    if (type === 'wifi') {
+      inputSec.style.display = 'none';
+      wifiSec.style.display = 'block';
+    } else {
+      inputSec.style.display = 'block';
+      wifiSec.style.display = 'none';
+      document.getElementById('inputLabel').textContent = typeConfig[type].label;
+      document.getElementById('mainInput').placeholder = typeConfig[type].placeholder;
+      document.getElementById('mainInput').value = '';
+    }
+    resetQR();
+  }
+
+  function buildQRData() {
+    const val = document.getElementById('mainInput').value.trim();
+    switch (currentType) {
+      case 'url': return val.startsWith('http') ? val : 'https://' + val;
+      case 'whatsapp':
+        const num = val.replace(/\D/g, '');
+        const intNum = num.startsWith('0') ? '92' + num.slice(1) : num;
+        return 'https://wa.me/' + intNum;
+      case 'text': return val;
+      case 'email': return 'mailto:' + val;
+      case 'phone': return 'tel:+' + val.replace(/\D/g, '');
+      case 'wifi':
+        const ssid = document.getElementById('wifiSSID').value.trim();
+        const pass = document.getElementById('wifiPass').value.trim();
+        return `WIFI:T:WPA;S:${ssid};P:${pass};;`;
+    }
+  }
+
+  function generateQR() {
+    const data = buildQRData();
+    if (!data || data.length < 3) { alert('Pehle kuch data daalo!'); return; }
+
+    const size = parseInt(document.getElementById('sizeSlider').value);
+    const color = document.getElementById('qrColor').value;
+    const bg = document.getElementById('bgColor').value;
+
+    document.getElementById('qrcode').innerHTML = '';
+
+    new QRCode(document.getElementById('qrcode'), {
+      text: data,
+      width: size,
+      height: size,
+      colorDark: color,
+      colorLight: bg,
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    document.getElementById('qrResult').style.display = 'block';
+    document.getElementById('qrResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function downloadQR() {
+    const canvas = document.querySelector('#qrcode canvas');
+    if (!canvas) { alert('Pehle QR code banao!'); return; }
+    const link = document.createElement('a');
+    link.download = 'toolsurdu-qrcode.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  }
+
+  function resetQR() {
+    document.getElementById('qrResult').style.display = 'none';
+    document.getElementById('qrcode').innerHTML = '';
+  }
+</script>
+</body>
+</html>
