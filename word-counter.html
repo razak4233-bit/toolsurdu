@@ -11,6 +11,72 @@
 <meta property="og:description" content="Apne text ke words, characters aur sentences count karo - bilkul free!">
 <meta property="og:url" content="https://razak4233-bit.github.io/toolsurdu/word-counter.html">
 <link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/word-counter.html">
+
+<!-- Schema Markup - Google ko batata hai yeh tool page hai -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Word Counter Online Free - ToolsUrdu",
+  "url": "https://razak4233-bit.github.io/toolsurdu/word-counter.html",
+  "description": "Free online word counter tool. Apne text ke words, characters, sentences aur paragraphs count karo - bilkul free. Pakistan ka best word counter.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PKR"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "ToolsUrdu",
+    "url": "https://razak4233-bit.github.io/toolsurdu/"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kya yeh word counter bilkul free hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haan, bilkul free hai. Koi account banana nahi, koi payment nahi, koi limit nahi. ToolsUrdu ke sab tools hamesha free rahenge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kya Urdu text bhi count hota hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haan! Urdu, English, Roman Urdu — koi bhi language ka text paste karo, sab count hoga. Hamare word counter mein koi language restriction nahi."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Word counter kaise use karein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upar diye gaye text box mein apna text paste karo ya likhna shuru karo. Results automatically update hote rehenge — words, characters, sentences sab kuch ek saath."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mera text safe hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bilkul safe. Aapka text sirf aapke browser mein process hota hai — koi server par send nahi hota. Aapki privacy 100% protected hai."
+      }
+    }
+  ]
+}
+</script>
+
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; }
@@ -66,16 +132,37 @@
   /* SEO DESCRIPTION */
   .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
   .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 20px 0 8px; }
   .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
-  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
   .feature-list { list-style: none; }
-  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; border-bottom: 1px solid #f5f5f5; }
   .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+
+  /* USE CASES */
+  .use-cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+  .use-case-card { background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; }
+  .use-case-card .icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .use-case-card h4 { font-size: 0.9rem; color: #1A1A2E; margin-bottom: 4px; }
+  .use-case-card p { font-size: 0.8rem; color: #777; line-height: 1.5; }
 
   /* FAQ */
   .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-item:last-child { border-bottom: none; }
   .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
-  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.7; }
+
+  /* RELATED TOOLS */
+  .related-tools { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .related-tools h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .tool-link { display: block; background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; text-decoration: none; transition: all 0.2s; }
+  .tool-link:hover { border-color: #0F3460; background: #eef3ff; }
+  .tool-link .t-icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .tool-link .t-name { font-size: 0.9rem; font-weight: bold; color: #1A1A2E; }
+  .tool-link .t-desc { font-size: 0.78rem; color: #888; margin-top: 3px; }
+
+  /* INFO BOX */
+  .info-box { background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: 0.9rem; color: #92400e; line-height: 1.7; }
 
   /* FOOTER */
   footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
@@ -86,10 +173,10 @@
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .btn-row { flex-direction: column; }
     .btn { width: 100%; text-align: center; }
+    .use-cases { grid-template-columns: 1fr 1fr; }
   }
 </style>
- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553186936074537"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553186936074537" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -155,48 +242,141 @@
     </div>
   </div>
 
-  <!-- SEO CONTENT - URDU DESCRIPTION -->
+  <!-- SEO CONTENT -->
   <div class="seo-box">
     <h2>Word Counter Tool Kya Hai? — یہ ٹول کیا ہے؟</h2>
     <p>
-      ToolsUrdu ka <strong>free online word counter</strong> ek aisa tool hai jo aapke text mein words, characters, sentences aur paragraphs automatically count karta hai. Chahe aap student hon, writer hon, ya blogger — yeh tool aapke rozana ke kaam ko aasaan bana deta hai.
+      ToolsUrdu ka <strong>free online word counter</strong> ek aisa tool hai jo aapke text mein words, characters, sentences aur paragraphs automatically count karta hai. Chahe aap student hon, writer hon, ya blogger — yeh tool aapke rozana ke kaam ko aasaan bana deta hai. Aaj ke digital daur mein jab har jagah writing ki zaroorat hai, ek reliable word counter aapka sabse zaroori tool hai.
     </p>
     <p>
-      Pakistan aur India mein laakhon log rozana online word counter use karte hain — essays likhne ke liye, social media posts ke liye, ya SEO articles ke liye. Hamare tool mein koi limit nahi — jitna chahein utna text paste karo.
+      Pakistan mein laakhon students, freelancers, aur bloggers rozana word counter use karte hain — university assignments ke liye, Fiverr articles ke liye, ya social media captions ke liye. Hamare tool mein koi signup nahi, koi limit nahi — sirf paste karo aur result pao.
     </p>
 
-    <h3>🌟 Is Tool Ki Khasiyatein:</h3>
+    <h3>🌟 Is Tool Ki Khasiyatein</h3>
     <ul class="feature-list">
-      <li>Instant word count — type karte hi result milta hai</li>
-      <li>Characters with aur without spaces dono count</li>
-      <li>Sentences aur paragraphs bhi count hote hain</li>
-      <li>Reading time aur speaking time ka estimate</li>
-      <li>Bilkul free — koi account banana nahi</li>
-      <li>Mobile friendly — phone par bhi perfectly kaam karta hai</li>
-      <li>Copy button — ek click mein text copy karo</li>
+      <li>Instant word count — type karte hi result milta hai, koi button nahi dabana</li>
+      <li>Characters with spaces aur without spaces — dono alag alag count hote hain</li>
+      <li>Sentences aur paragraphs bhi automatically count hote hain</li>
+      <li>Reading time aur speaking time ka accurate estimate</li>
+      <li>English, Urdu, Roman Urdu — koi bhi language ka text count hota hai</li>
+      <li>Bilkul free — koi account banana nahi, koi payment nahi</li>
+      <li>Mobile friendly — phone aur laptop dono par perfectly kaam karta hai</li>
+      <li>Copy button — ek click mein saara text copy karo</li>
+      <li>100% secure — aapka text browser se bahar nahi jata</li>
     </ul>
 
-    <h3>📖 Kaise Use Karein — استعمال کا طریقہ:</h3>
+    <h3>📖 Kaise Use Karein — استعمال کا طریقہ</h3>
     <p>
-      Upar diye gaye text box mein apna text paste karo ya direct likhna shuru karo. Neeche automatically sab counts update ho jayenge — words, characters, sentences sab kuch ek saath. Koi button dabane ki zaroorat nahi!
+      Upar diye gaye text box mein apna text paste karo ya direct likhna shuru karo. Neeche automatically sab counts update ho jayenge — words, characters, sentences sab kuch ek saath. Koi button dabane ki zaroorat nahi! Jab text clear karna ho toh "Clear" button dabao, aur copy karne ke liye "Copy Text" button use karo.
     </p>
 
-    <h3>❓ Aksar Pooche Jane Wale Sawal (FAQ):</h3>
+    <h3>🎯 Kab Use Karein — استعمال کے مواقع</h3>
+    <div class="use-cases">
+      <div class="use-case-card">
+        <div class="icon">🎓</div>
+        <h4>Students ke liye</h4>
+        <p>University assignments mein word limit check karo — 500 words ya 1000 words, exact pata chale.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">✍️</div>
+        <h4>Bloggers ke liye</h4>
+        <p>SEO ke liye articles 800+ words ke hone chahiye — yeh tool instantly batata hai kitne words hain.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">💼</div>
+        <h4>Freelancers ke liye</h4>
+        <p>Fiverr ya Upwork pe clients ko exact word count deliver karo — professional kaam ke liye zaroori.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">📱</div>
+        <h4>Social Media ke liye</h4>
+        <p>Twitter 280 characters, Instagram captions — character limit check karo before posting.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      💡 <strong>Pro Tip:</strong> SEO ke liye blog post likhte waqt koshish karo ke article kam az kam 800 words ka ho. Google zyada words wale articles ko zyada importance deta hai. Hamare word counter se instantly check karo!
+    </div>
+
+    <h3>📊 Word Count Limits — Alag Alag Platforms ke liye</h3>
+    <p>Har platform ki alag word ya character limit hoti hai. Yeh common limits yaad rakhein:</p>
+    <ul class="feature-list">
+      <li>Twitter / X post — 280 characters maximum</li>
+      <li>Instagram caption — 2,200 characters (lekin 125 se zyada chhupta hai)</li>
+      <li>Facebook post — 63,206 characters (practically unlimited)</li>
+      <li>Google meta description — 155-160 characters ideal</li>
+      <li>SEO blog post — minimum 800 words recommended</li>
+      <li>University essay (short) — usually 500 se 1,000 words</li>
+      <li>University thesis chapter — 5,000 se 10,000 words</li>
+      <li>WhatsApp message — 65,536 characters maximum</li>
+    </ul>
+
+    <h3>❓ Aksar Pooche Jane Wale Sawal — FAQ</h3>
+
     <div class="faq-item">
       <div class="faq-q">Q: Kya yeh word counter bilkul free hai?</div>
-      <div class="faq-a">A: Haan, bilkul free hai. Koi account banana nahi, koi payment nahi, koi limit nahi.</div>
+      <div class="faq-a">A: Haan, bilkul free hai. Koi account banana nahi, koi payment nahi, koi limit nahi. ToolsUrdu ke sab tools hamesha free rahenge — yeh hamara promise hai.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q: Kya Urdu text bhi count hota hai?</div>
-      <div class="faq-a">A: Haan! Urdu, English, Roman Urdu — koi bhi language ka text paste karo, sab count hoga.</div>
+      <div class="faq-a">A: Haan! Urdu, English, Roman Urdu — koi bhi language ka text paste karo, sab count hoga. Hamare counter mein koi language restriction nahi hai.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">Q: Mera text safe hai?</div>
-      <div class="faq-a">A: Bilkul safe. Aapka text sirf aapke browser mein process hota hai — koi server par send nahi hota.</div>
+      <div class="faq-q">Q: Mera text safe hai? Kya koi dekh sakta hai?</div>
+      <div class="faq-a">A: Bilkul safe. Aapka text sirf aapke browser mein process hota hai — hamare server par kuch bhi send nahi hota. Aapka personal ya confidential text completely private rehta hai.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q: Maximum kitne words count ho sakte hain?</div>
-      <div class="faq-a">A: Koi limit nahi — chahe hazar words hon ya lakh, sab count honge.</div>
+      <div class="faq-a">A: Koi limit nahi — chahe hazar words hon ya lakh, sab count honge. Hamare tool mein text size ki koi restriction nahi.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Word counter aur character counter mein kya farq hai?</div>
+      <div class="faq-a">A: Word counter sirf words count karta hai (space se alag alag lafz). Character counter har ek letter, number, space, aur punctuation mark count karta hai. Hamare tool mein dono ek saath milte hain!</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Reading time kaise calculate hota hai?</div>
+      <div class="faq-a">A: Average adult 238 words per minute padhta hai aur 130-140 words per minute bolta hai. Hamare tool mein yahi average use hota hai aur approximate reading/speaking time calculate hota hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: Kya yeh tool offline bhi kaam karta hai?</div>
+      <div class="faq-a">A: Page load hone ke baad text counting feature offline bhi kaam karta hai kyunki sab processing browser mein hoti hai. Lekin page dobara load karne ke liye internet chahiye.</div>
+    </div>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <div class="related-tools">
+    <h2>🔧 Hamare Doosre Tools — مزید ٹولز</h2>
+    <div class="tools-grid">
+      <a href="case-converter.html" class="tool-link">
+        <div class="t-icon">🔤</div>
+        <div class="t-name">Case Converter</div>
+        <div class="t-desc">UPPER, lower, Title case mein convert karo</div>
+      </a>
+      <a href="age-calculator.html" class="tool-link">
+        <div class="t-icon">🎂</div>
+        <div class="t-name">Age Calculator</div>
+        <div class="t-desc">Apni exact age seconds tak janiye</div>
+      </a>
+      <a href="password-generator.html" class="tool-link">
+        <div class="t-icon">🔐</div>
+        <div class="t-name">Password Generator</div>
+        <div class="t-desc">Strong secure password banao</div>
+      </a>
+      <a href="bmi-calculator.html" class="tool-link">
+        <div class="t-icon">⚖️</div>
+        <div class="t-name">BMI Calculator</div>
+        <div class="t-desc">Body Mass Index check karo</div>
+      </a>
+      <a href="percentage-calculator.html" class="tool-link">
+        <div class="t-icon">📊</div>
+        <div class="t-name">Percentage Calculator</div>
+        <div class="t-desc">Marks, discount, percentage calculate karo</div>
+      </a>
+      <a href="qr-generator.html" class="tool-link">
+        <div class="t-icon">📱</div>
+        <div class="t-name">QR Code Generator</div>
+        <div class="t-desc">Website ya WhatsApp ka QR banao</div>
+      </a>
     </div>
   </div>
 
@@ -237,8 +417,8 @@
     document.getElementById('lineCount').textContent = lines;
 
     // Reading & Speaking time
-    const readSec = Math.ceil(words / 4); // avg 238 wpm
-    const speakSec = Math.ceil(words / 2.3); // avg 140 wpm
+    const readSec = Math.ceil(words / 4);
+    const speakSec = Math.ceil(words / 2.3);
     const readTime = readSec < 60 ? readSec + ' sec' : Math.ceil(readSec/60) + ' min';
     const speakTime = speakSec < 60 ? speakSec + ' sec' : Math.ceil(speakSec/60) + ' min';
     document.getElementById('readingTime').innerHTML =
