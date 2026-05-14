@@ -8,7 +8,76 @@
 <title>QR Code Generator Online Free - کیو آر کوڈ بنائیں | ToolsUrdu</title>
 <meta name="description" content="Free online QR code generator Pakistan. Apni website, WhatsApp number, text ya koi bhi link ka QR code banao - bilkul free aur instant download karo!">
 <meta name="keywords" content="QR code generator, QR code banana, free QR code Pakistan, QR code maker, WhatsApp QR code, کیو آر کوڈ">
+<meta property="og:title" content="Free QR Code Generator Online | ToolsUrdu">
+<meta property="og:description" content="Website, WhatsApp, WiFi — kisi bhi cheez ka QR code banao bilkul free!">
+<meta property="og:url" content="https://razak4233-bit.github.io/toolsurdu/qr-generator.html">
 <link rel="canonical" href="https://razak4233-bit.github.io/toolsurdu/qr-generator.html">
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "QR Code Generator Online Free - ToolsUrdu",
+  "url": "https://razak4233-bit.github.io/toolsurdu/qr-generator.html",
+  "description": "Free online QR code generator Pakistan. Website URL, WhatsApp number, WiFi, email, phone — kisi bhi cheez ka custom QR code banao aur PNG mein download karo.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PKR"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "ToolsUrdu",
+    "url": "https://razak4233-bit.github.io/toolsurdu/"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "QR code kya hota hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QR code ek square barcode hota hai jo phone camera se scan karne par automatically website khol deta hai, WhatsApp chat shuru karta hai, ya WiFi se connect kar deta hai. QR ka matlab hai Quick Response — yeh ek second mein scan ho jata hai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "QR code kaise scan karte hain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Android ya iPhone ka camera open karo aur QR code par point karo — automatically link ya information screen par aa jayegi. Koi extra app ki zaroorat nahi — built-in camera kaam karta hai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "WhatsApp ka QR code kaise banate hain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WhatsApp type select karo aur apna Pakistan number daalo (03xxxxxxxxx format mein). QR code ban jayega — jo scan karne par directly aapka WhatsApp chat khulega. Business ke liye bohot useful hai."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kya QR code hamesha kaam karta hai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haan! Hamare tool se bana QR code permanently kaam karta hai — koi expiry nahi, koi server dependency nahi. URL wale QR codes tab tak kaam karte hain jab tak woh website live hai."
+      }
+    }
+  ]
+}
+</script>
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6553186936074537" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
@@ -27,37 +96,28 @@
   .subtitle { color: #666; font-size: 0.95rem; margin-bottom: 24px; }
   .tool-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
 
-  /* TYPE TABS */
   .type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 24px; }
   .type-btn { padding: 12px 8px; border: 2px solid #e0e0e0; border-radius: 10px; background: white; cursor: pointer; font-size: 0.85rem; font-weight: bold; color: #666; transition: all 0.2s; text-align: center; }
   .type-btn:hover { border-color: #0F3460; color: #0F3460; }
   .type-btn.active { border-color: #0F3460; background: #0F3460; color: white; }
   .type-btn .type-icon { font-size: 1.4rem; display: block; margin-bottom: 4px; }
 
-  /* INPUT */
   .input-section { margin-bottom: 20px; }
   .input-section label { display: block; font-weight: bold; color: #1A1A2E; margin-bottom: 8px; font-size: 0.95rem; }
-  .input-section input, .input-section textarea {
-    width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 10px;
-    font-size: 1rem; outline: none; transition: border 0.2s; font-family: Arial, sans-serif;
-  }
+  .input-section input, .input-section textarea { width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; outline: none; transition: border 0.2s; font-family: Arial, sans-serif; }
   .input-section input:focus, .input-section textarea:focus { border-color: #0F3460; }
   .input-section textarea { height: 100px; resize: vertical; }
 
-  /* OPTIONS */
   .options-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
   .option-group label { display: block; font-size: 0.85rem; color: #666; margin-bottom: 6px; font-weight: bold; }
   .option-group input[type="color"] { width: 100%; height: 40px; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; padding: 2px; }
   .option-group input[type="range"] { width: 100%; accent-color: #0F3460; margin-top: 8px; }
-  .size-val { font-size: 0.82rem; color: #888; text-align: center; }
   .option-group select { width: 100%; padding: 10px 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.9rem; outline: none; }
   .option-group select:focus { border-color: #0F3460; }
 
-  /* GENERATE BTN */
   .btn-generate { width: 100%; padding: 14px; background: #0F3460; color: white; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: bold; cursor: pointer; transition: background 0.2s; }
   .btn-generate:hover { background: #1A1A2E; }
 
-  /* QR RESULT */
   .qr-result { display: none; margin-top: 24px; text-align: center; }
   .qr-box { background: white; border: 3px solid #e8edf5; border-radius: 16px; padding: 24px; display: inline-block; margin-bottom: 16px; }
   #qrcode { display: inline-block; }
@@ -70,16 +130,42 @@
   .btn-new { background: #e0f2fe; color: #0369a1; }
   .btn-new:hover { background: #bae6fd; }
 
+  /* SEO */
   .seo-box { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
   .seo-box h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 20px 0 8px; }
   .seo-box p { color: #555; line-height: 1.8; margin-bottom: 12px; font-size: 0.95rem; }
-  .seo-box h3 { font-size: 1rem; color: #0F3460; margin: 16px 0 8px; }
   .feature-list { list-style: none; }
-  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; }
+  .feature-list li { padding: 6px 0; color: #555; font-size: 0.92rem; border-bottom: 1px solid #f5f5f5; }
   .feature-list li::before { content: "✓ "; color: #1B7A1B; font-weight: bold; }
+
+  .use-cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+  .use-case-card { background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; }
+  .use-case-card .icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .use-case-card h4 { font-size: 0.9rem; color: #1A1A2E; margin-bottom: 4px; }
+  .use-case-card p { font-size: 0.8rem; color: #777; line-height: 1.5; }
+
+  .qr-types-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+  .qr-type-card { background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; }
+  .qr-type-card .icon { font-size: 1.3rem; margin-bottom: 6px; }
+  .qr-type-card h4 { font-size: 0.88rem; color: #0F3460; margin-bottom: 4px; font-weight: bold; }
+  .qr-type-card p { font-size: 0.78rem; color: #777; line-height: 1.5; }
+
+  .info-box { background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: 0.9rem; color: #92400e; line-height: 1.7; }
+
   .faq-item { border-bottom: 1px solid #f0f0f0; padding: 14px 0; }
+  .faq-item:last-child { border-bottom: none; }
   .faq-q { font-weight: bold; color: #1A1A2E; margin-bottom: 6px; font-size: 0.95rem; }
-  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.6; }
+  .faq-a { color: #666; font-size: 0.9rem; line-height: 1.7; }
+
+  .related-tools { background: white; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 28px; margin-bottom: 24px; }
+  .related-tools h2 { font-size: 1.2rem; color: #1A1A2E; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+  .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .tool-link { display: block; background: #f8faff; border: 1.5px solid #e8edf5; border-radius: 10px; padding: 14px; text-decoration: none; transition: all 0.2s; }
+  .tool-link:hover { border-color: #0F3460; background: #eef3ff; }
+  .tool-link .t-icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .tool-link .t-name { font-size: 0.9rem; font-weight: bold; color: #1A1A2E; }
+  .tool-link .t-desc { font-size: 0.78rem; color: #888; margin-top: 3px; }
 
   footer { text-align: center; padding: 28px; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; margin-top: 20px; background: white; }
   footer a { color: #0F3460; text-decoration: none; margin: 0 10px; }
@@ -88,6 +174,8 @@
     h1 { font-size: 1.4rem; }
     .options-row { grid-template-columns: 1fr; }
     .type-grid { grid-template-columns: repeat(3, 1fr); }
+    .use-cases { grid-template-columns: 1fr 1fr; }
+    .qr-types-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -113,8 +201,6 @@
   <p class="subtitle">Kisi bhi website, number, ya text ka QR code banao — bilkul free aur download karo!</p>
 
   <div class="tool-box">
-
-    <!-- TYPE SELECTION -->
     <div class="type-grid">
       <button class="type-btn active" onclick="setType('url', this)">
         <span class="type-icon">🌐</span>Website URL
@@ -136,13 +222,11 @@
       </button>
     </div>
 
-    <!-- INPUT SECTION -->
     <div class="input-section" id="inputSection">
       <label id="inputLabel">🌐 Website URL daalo:</label>
       <input type="text" id="mainInput" placeholder="https://example.com">
     </div>
 
-    <!-- WIFI SECTION (hidden by default) -->
     <div id="wifiSection" style="display:none; margin-bottom:20px;">
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
         <div>
@@ -156,7 +240,6 @@
       </div>
     </div>
 
-    <!-- OPTIONS -->
     <div class="options-row">
       <div class="option-group">
         <label>🎨 QR Color</label>
@@ -174,7 +257,6 @@
 
     <button class="btn-generate" onclick="generateQR()">📱 QR Code Banao</button>
 
-    <!-- RESULT -->
     <div class="qr-result" id="qrResult">
       <div class="qr-box">
         <div id="qrcode"></div>
@@ -186,45 +268,166 @@
       </div>
       <p style="color:#888; font-size:0.82rem; margin-top:12px;">✅ QR code ready — scan karo ya download karo!</p>
     </div>
-
   </div>
 
-  <!-- SEO -->
+  <!-- SEO CONTENT -->
   <div class="seo-box">
     <h2>QR Code Generator Kya Hai? — کیو آر کوڈ کیا ہے؟</h2>
     <p>
-      ToolsUrdu ka <strong>free online QR code generator</strong> Pakistan mein business owners, students aur freelancers ke liye perfect tool hai. QR code ek square barcode hota hai jo phone se scan karne par automatically website khol deta hai, WhatsApp chat shuru karta hai, ya WiFi se connect kar deta hai.
+      QR code yani <strong>Quick Response Code</strong> ek square barcode hota hai jo phone camera se scan karne par automatically koi bhi information ya link khol deta hai. ToolsUrdu ka <strong>free online QR code generator</strong> Pakistan mein business owners, students, teachers aur freelancers ke liye perfect tool hai.
     </p>
     <p>
-      Pakistan mein QR codes ab har jagah use ho rahe hain — restaurants ke menus mein, business cards mein, dukano par — aur yeh sab bilkul free mein bana sakte ho hamare tool se!
+      Pakistan mein QR codes ab har jagah use ho rahe hain — restaurants ke digital menus mein, business cards mein, dukano ke signboards par, school assignments mein, aur social media profiles mein. Aur yeh sab bilkul free mein bana sakte ho hamare tool se — koi account nahi, koi payment nahi!
     </p>
-    <h3>🌟 Khasiyatein:</h3>
+
+    <h3>📱 6 Qism ke QR Codes — Tamam Types Ki Wazahat</h3>
+    <div class="qr-types-grid">
+      <div class="qr-type-card">
+        <div class="icon">🌐</div>
+        <h4>Website URL</h4>
+        <p>Apni website, blog, ya koi bhi link ka QR code — scan karo aur seedha website khul jayegi.</p>
+      </div>
+      <div class="qr-type-card">
+        <div class="icon">💬</div>
+        <h4>WhatsApp</h4>
+        <p>Apna number daalo — scan karne wala seedha aapka WhatsApp chat khulega. Business ke liye best!</p>
+      </div>
+      <div class="qr-type-card">
+        <div class="icon">📝</div>
+        <h4>Text</h4>
+        <p>Koi bhi message, address, ya information — scan karne par text screen par dikhega.</p>
+      </div>
+      <div class="qr-type-card">
+        <div class="icon">📧</div>
+        <h4>Email</h4>
+        <p>Email address ka QR — scan karo aur email app automatically khul jayegi aapke address par.</p>
+      </div>
+      <div class="qr-type-card">
+        <div class="icon">📞</div>
+        <h4>Phone Number</h4>
+        <p>Phone number ka QR — scan karo aur call screen foran aa jayegi. Visiting cards ke liye perfect.</p>
+      </div>
+      <div class="qr-type-card">
+        <div class="icon">📶</div>
+        <h4>WiFi</h4>
+        <p>WiFi ka naam aur password daalo — scan karne par automatically WiFi se connect ho jayega!</p>
+      </div>
+    </div>
+
+    <h3>🎯 Pakistan Mein Kahan Use Karein</h3>
+    <div class="use-cases">
+      <div class="use-case-card">
+        <div class="icon">🏪</div>
+        <h4>Dukan aur Business</h4>
+        <p>Counter par WhatsApp QR lagao — customers ek scan mein aapse contact kar sakein. Orders aur inquiries easy ho jayein.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">🎓</div>
+        <h4>Teachers aur Students</h4>
+        <p>Assignment link, YouTube video, ya study material ka QR banao aur board par lagao — students scan karein.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">💼</div>
+        <h4>Business Cards</h4>
+        <p>Visiting card mein apni website ya WhatsApp ka QR code lagao — modern aur professional impression.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="icon">🏠</div>
+        <h4>Ghar ka WiFi</h4>
+        <p>Ghar ka WiFi QR code banao aur fridge ya wall par lagao — mehman scan karein aur password type na karein.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      💡 <strong>Pro Tip:</strong> WhatsApp Business use karte ho? Apna WhatsApp number ka QR code banao, print karo aur dukan ke bahar lagao — customers seedha aapse WhatsApp par contact karein ge. Pakistan mein yeh bohot effective marketing hai!
+    </div>
+
+    <h3>🌟 Is Tool Ki Khasiyatein</h3>
     <ul class="feature-list">
       <li>6 qism ke QR codes — URL, WhatsApp, Text, Email, Phone, WiFi</li>
-      <li>Custom colors — apni marzi ka rang chunno</li>
-      <li>Size adjust karo — 150px se 400px tak</li>
-      <li>PNG mein download karo — high quality</li>
-      <li>Bilkul free — koi account nahi</li>
-      <li>Mobile friendly — phone par bhi banao</li>
+      <li>Custom colors — apni brand ka rang chunno QR mein</li>
+      <li>Size adjust karo — 150px se 400px tak, print ke liye bhi perfect</li>
+      <li>High quality PNG mein download karo — print bhi ho sakta hai</li>
+      <li>Permanently kaam karta hai — koi expiry nahi</li>
+      <li>Bilkul free — koi account, koi payment, koi limit nahi</li>
+      <li>Mobile friendly — phone par bhi banao aur download karo</li>
+      <li>Instant generation — ek click mein QR code ready</li>
     </ul>
-    <h3>❓ Aksar Pooche Jane Wale Sawal:</h3>
+
+    <h3>📖 Kaise Use Karein — استعمال کا طریقہ</h3>
+    <p>
+      Upar diye gaye buttons mein se apna QR type choose karo — URL, WhatsApp, Text, Email, Phone ya WiFi. Phir apna data daalo. Color aur size customize karo agar chahein. "QR Code Banao" button dabao aur foran aapka QR code ready ho jayega. "PNG Download Karo" se save karo — phir print karo ya digital use karo jahan chahein!
+    </p>
+
+    <h3>❓ Aksar Pooche Jane Wale Sawal — FAQ</h3>
+
+    <div class="faq-item">
+      <div class="faq-q">Q: QR code kya hota hai aur kaise kaam karta hai?</div>
+      <div class="faq-a">A: QR code yani Quick Response Code ek square barcode hai jisme information encoded hoti hai. Phone ka camera is pattern ko read karta hai aur instantly link kholta hai ya information dikhata hai. Koi extra app ki zaroorat nahi — built-in camera kaam karta hai Android aur iPhone dono mein.</div>
+    </div>
     <div class="faq-item">
       <div class="faq-q">Q: QR code kaise scan karte hain?</div>
-      <div class="faq-a">A: Android ya iPhone ka camera open karo aur QR code par point karo — automatically link ya information aa jayegi.</div>
+      <div class="faq-a">A: Android ya iPhone ka camera open karo aur QR code par point karo — automatically link ya information screen par notification ki tarah aa jayegi. Bas us notification par tap karo. Purane phones ke liye Google Lens ya koi QR scanner app use karo.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q: WhatsApp ka QR code kaise banate hain?</div>
-      <div class="faq-a">A: "WhatsApp" type select karo aur apna Pakistan number daalo (03xxxxxxxxx format mein) — QR code ban jayega jo scan karne par directly WhatsApp chat khulega.</div>
+      <div class="faq-a">A: "WhatsApp" type select karo aur apna Pakistan number daalo (03xxxxxxxxx format mein — jaise 03001234567). QR code ban jayega jo scan karne par directly aapka WhatsApp chat khulega. Scan karne wala bina number save kiye aapse chat kar sakta hai — business ke liye bohot useful!</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q: Kya QR code hamesha kaam karta hai?</div>
-      <div class="faq-a">A: Haan! Hamare tool se bana QR code permanently kaam karta hai — koi expiry nahi, koi server dependency nahi.</div>
+      <div class="faq-a">A: Haan! Hamare tool se bana QR code permanently kaam karta hai — koi expiry nahi, koi server dependency nahi. URL wale QR codes tab tak kaam karte hain jab tak woh website live hai. Text, WhatsApp, WiFi QR codes hamesha ke liye kaam karte hain.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Q: Business card ke liye QR code kaise banun?</div>
-      <div class="faq-a">A: Apni website URL ya WhatsApp number ka QR code banao, PNG download karo aur apne business card designer ko de do.</div>
+      <div class="faq-a">A: Apni website URL ya WhatsApp number ka QR code banao. Size 300-400px rakho taake print mein clear ho. PNG download karo aur apne business card designer ko de do — woh print mein lagaye ga. Yeh aapke card ko modern aur professional banata hai.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: WiFi QR code kaise kaam karta hai?</div>
+      <div class="faq-a">A: WiFi type select karo, network ka naam (SSID) aur password daalo. QR code ban jayega. Jab koi is QR ko scan kare ga, unka phone automatically us WiFi network se connect ho jayega — password type karne ki zaroorat nahi! Ghar, office ya cafe ke liye perfect.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: QR code ka rang (color) kyun badlen?</div>
+      <div class="faq-a">A: Custom color se aapka QR code brand ke saath match karta hai — jaise kisi company ka logo color. Lekin dhyan rakhein ke foreground (QR) aur background mein kaafi contrast hona chahiye — warna scan nahi hoga. Black on white hamesha best kaam karta hai.</div>
     </div>
   </div>
+
+  <!-- RELATED TOOLS -->
+  <div class="related-tools">
+    <h2>🔧 Hamare Doosre Tools — مزید ٹولز</h2>
+    <div class="tools-grid">
+      <a href="word-counter.html" class="tool-link">
+        <div class="t-icon">📊</div>
+        <div class="t-name">Word Counter</div>
+        <div class="t-desc">Words aur characters count karo</div>
+      </a>
+      <a href="password-generator.html" class="tool-link">
+        <div class="t-icon">🔐</div>
+        <div class="t-name">Password Generator</div>
+        <div class="t-desc">Strong secure password banao</div>
+      </a>
+      <a href="age-calculator.html" class="tool-link">
+        <div class="t-icon">🎂</div>
+        <div class="t-name">Age Calculator</div>
+        <div class="t-desc">Apni exact age seconds tak janiye</div>
+      </a>
+      <a href="bmi-calculator.html" class="tool-link">
+        <div class="t-icon">⚖️</div>
+        <div class="t-name">BMI Calculator</div>
+        <div class="t-desc">Body Mass Index check karo</div>
+      </a>
+      <a href="percentage-calculator.html" class="tool-link">
+        <div class="t-icon">📊</div>
+        <div class="t-name">Percentage Calculator</div>
+        <div class="t-desc">Marks, discount calculate karo</div>
+      </a>
+      <a href="case-converter.html" class="tool-link">
+        <div class="t-icon">🔤</div>
+        <div class="t-name">Case Converter</div>
+        <div class="t-desc">UPPER, lower, Title case convert karo</div>
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <footer>
@@ -242,7 +445,7 @@
   const typeConfig = {
     url: { label: '🌐 Website URL daalo:', placeholder: 'https://example.com' },
     whatsapp: { label: '💬 WhatsApp Number daalo (Pakistan: 03xxxxxxxxx):', placeholder: '03001234567' },
-    text: { label: '📝 Apna text daalo:', placeholder: 'Yahan koi bhi text likhو...' },
+    text: { label: '📝 Apna text daalo:', placeholder: 'Yahan koi bhi text likho...' },
     email: { label: '📧 Email address daalo:', placeholder: 'example@gmail.com' },
     phone: { label: '📞 Phone number daalo:', placeholder: '03001234567' },
     wifi: { label: '', placeholder: '' },
@@ -252,10 +455,8 @@
     currentType = type;
     document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
     const wifiSec = document.getElementById('wifiSection');
     const inputSec = document.getElementById('inputSection');
-
     if (type === 'wifi') {
       inputSec.style.display = 'none';
       wifiSec.style.display = 'block';
@@ -290,13 +491,10 @@
   function generateQR() {
     const data = buildQRData();
     if (!data || data.length < 3) { alert('Pehle kuch data daalo!'); return; }
-
     const size = parseInt(document.getElementById('sizeSlider').value);
     const color = document.getElementById('qrColor').value;
     const bg = document.getElementById('bgColor').value;
-
     document.getElementById('qrcode').innerHTML = '';
-
     new QRCode(document.getElementById('qrcode'), {
       text: data,
       width: size,
@@ -305,7 +503,6 @@
       colorLight: bg,
       correctLevel: QRCode.CorrectLevel.H
     });
-
     document.getElementById('qrResult').style.display = 'block';
     document.getElementById('qrResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
